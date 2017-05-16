@@ -1,0 +1,11 @@
+{
+  "name": "Mopidy",
+  "version": "beta",
+  "slug": "mopidy",
+  "description": "mopidy music server",
+  "startup": "before",
+  "boot": "auto",
+  "image": "bestlibre/{arch}-mopidy",
+  "options": {},
+  "schema": {"options": [{"name": "str", "value": "str"}]}
+}
