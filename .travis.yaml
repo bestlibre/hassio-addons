@@ -1,0 +1,8 @@
+addons:
+  apt:
+    packages:
+    - jq
+before_script:
+  - docker login -u $DOCKER_USER -p $DOCKER_PASS
+script:
+  - build.sh
