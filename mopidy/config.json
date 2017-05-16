@@ -1,11 +1,13 @@
 {
-  "name": "Mopidy",
-  "version": "beta",
-  "slug": "mopidy",
-  "description": "mopidy music server",
-  "startup": "before",
-  "boot": "auto",
-  "image": "bestlibre/{arch}-mopidy",
-  "options": {},
-  "schema": {"options": [{"name": "str", "value": "str"}]}
+    "name": "Mopidy",
+    "version": "beta",
+    "slug": "mopidy",
+    "description": "mopidy music server",
+    "startup": "before",
+    "boot": "auto",
+    "image": "bestlibre/{arch}-mopidy",
+    "options": {},
+    "schema": {"options": [{"name": "str", "value": "str"}]},
+    "devices": ["/dev/snd:/dev/snd:rwm"],
+    "ports": {"6680/tcp": 6680, "6600/tcp": 6600}
 }
