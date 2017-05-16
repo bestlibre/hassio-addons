@@ -1,6 +1,5 @@
 FROM %%BASE_IMAGE%%
 
-ENV VERSION %%VERSION%%
 ENV LANG C.UTF-8
 
 #Install mopidy
