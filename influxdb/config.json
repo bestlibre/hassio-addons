@@ -1,0 +1,12 @@
+{
+  "name": "InfluxDb",
+  "version": "beta",
+  "slug": "influxdb",
+  "description": "InfluxDb server",
+  "startup": "before",
+  "boot": "auto",
+  "image": "bestlibre/{arch}-influxdb",
+  "options": {},
+  "schema": {},
+  "ports": {"8086/tcp": 8086}
+}
