@@ -1,9 +1,9 @@
 #!/bin/bash
 
-for addon in "mopidy" "influxdb" "snapcastclient" "snapcastserver"
+addon=$1
 do
     for arch in "armhf" "amd64"
     do
-	./create_hassio_addon.sh -a $arch -s $addon -p -l .
+	./create_hassio_addon.sh -a $arch -s $addon -p -l . 
     done
 done
