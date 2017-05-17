@@ -1,0 +1,12 @@
+{
+  "name": "snapcast-server",
+  "version": "beta",
+  "slug": "snapcastserver",
+  "description": "Snapcast server for multiroom audio diffusion",
+  "startup": "before",
+  "boot": "auto",
+  "image": "bestlibre/{arch}-snapcast-server",
+  "options": {},
+  "schema": {},
+  "ports": {"1704/tcp": 1704}
+}
