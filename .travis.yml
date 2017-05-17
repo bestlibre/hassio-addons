@@ -2,7 +2,12 @@ sudo: required
 services:
   - docker
 before_install:
-  - sudo apt-get install jq  
+  - sudo apt-get install jq
+env:
+  - ADDON="mopidy"
+  - ADDON="influxdb"
+  - ADDON="snapcastclient"
+  - ADDON="snapcastserver"
 script:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
-  - ./build.sh
+  - ./build.sh $ADDON
