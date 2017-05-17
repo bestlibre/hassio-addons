@@ -1,6 +1,9 @@
 #!/bin/bash
 
-./create_hassio_addon.sh -a armhf -s mopidy -p -l .
-./create_hassio_addon.sh -a amd64 -s mopidy -p -l .
-./create_hassio_addon.sh -a armhf -s influxdb -p -l .
-./create_hassio_addon.sh -a amd64 -s influxdb -p -l .
+for addon in "mopidy" "influxdb" "snapcastclient" "snapcastserver"
+do
+    for arch in "armhf" "amd64"
+    do
+	./create_hassio_addon.sh -a $arch -s $addon -p -l .
+    done
+done
