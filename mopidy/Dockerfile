@@ -7,7 +7,6 @@ RUN echo "http://nl.alpinelinux.org/alpine/v3.5/main" > /etc/apk/repositories \
  && echo "http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories \
  && echo "http://nl.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
  && echo "http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
- && apk upgrade --no-cache --available \
  && apk add --no-cache --virtual .build-deps \
  	build-base \
 	git \
