@@ -27,6 +27,7 @@ RUN echo "http://nl.alpinelinux.org/alpine/v3.5/main" > /etc/apk/repositories \
     	pyasn1==0.1.8 \
         Mopidy-Moped \
         Mopidy-GMusic \
+	Mopidy-Local-SQLite \
  && apk del .build-deps
 
 COPY mopidy.conf /var/lib/mopidy/.config/mopidy/mopidy.conf

@@ -7,8 +7,11 @@
     "startup": "before",
     "boot": "auto",
     "image": "bestlibre/{arch}-mopidy",
-    "options": {},
-    "schema": {"options": [{"name": "str", "value": "str"}]},
+    "options": {"local_scan": true},
+    "schema": {
+	"local_scan": "bool",
+	"options": [{"name": "str", "value": "str"}]
+    },
     "devices": ["/dev/snd:/dev/snd:rwm"],
     "ports": {"6680/tcp": 6680, "6600/tcp": 6600},
     "map": ["share", "mnt"]

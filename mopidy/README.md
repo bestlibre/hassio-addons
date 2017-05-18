@@ -11,6 +11,8 @@ Mopidy is built with those extensions :
 The local media can be stored on /share (which allow an access through the samba addon) or /mnt. By default the directory for media is /share/mopidy/media. Since /share (and /mnt) is read-only, the directory must be created from another addon or directly on the host.
 
 ## Configuration
+### local_scan (bool)
+If it is set to true, a local scan is performed on startup.
 
 ### options (list of dict)
 
@@ -22,6 +24,7 @@ data_dir = /data/mopidy/data_dir
 
 [local]
 media_dir = /share/mopidy/media
+library = sqlite
 
 [m3u]
 playlists_dir = /share/mopidy/playlists
