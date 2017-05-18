@@ -1,13 +1,15 @@
 {
     "name": "Mopidy",
-    "version": "beta",
+    "version": "0.1",
     "slug": "mopidy",
     "description": "mopidy music server",
+    "url": "https://github.com/bestlibre/hassio-addons/tree/master/mopidy",
     "startup": "before",
     "boot": "auto",
     "image": "bestlibre/{arch}-mopidy",
     "options": {},
     "schema": {"options": [{"name": "str", "value": "str"}]},
     "devices": ["/dev/snd:/dev/snd:rwm"],
-    "ports": {"6680/tcp": 6680, "6600/tcp": 6600}
+    "ports": {"6680/tcp": 6680, "6600/tcp": 6600},
+    "map": ["share", "mnt"]
 }

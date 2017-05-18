@@ -8,6 +8,8 @@ Mopidy is built with those extensions :
 - Mopidy-Moped
 - Mopidy-GMusic
 
+The local media can be stored on /share (which allow an access through the samba addon) or /mnt. By default the directory for media is /share/mopidy/media. Since /share (and /mnt) is read-only, the directory must be created from another addon or directly on the host.
+
 ## Configuration
 
 ### options (list of dict)
@@ -19,10 +21,10 @@ cache_dir = /data/mopidy/cache
 data_dir = /data/mopidy/data_dir
 
 [local]
-media_dir = /data/mopidy/media
+media_dir = /share/mopidy/media
 
 [m3u]
-playlists_dir = /data/mopidy/playlists
+playlists_dir = /share/mopidy/playlists
 
 [http]
 hostname = 0.0.0.0
@@ -33,11 +35,11 @@ hostname = 0.0.0.0
 
 To add other options, or overwrite existing ones, you need to add them as elements in this list. Each item must be a dict with a "name" and a "value" element.
 They will be added on the mopidy call as -o name=value
-For exemple
+For exemple, to overwrite the media configuration to use mnt,
 ````
-{"name": "gmusic/username", "value": "user@gmail.com"}
+{"name": "local/media_dir", "value": "/mnt/media"}
 ````
 will become
 ````
--o gmusic/username=user@gmail.com
+-o local/media_dir=/mnt/media
 ````
