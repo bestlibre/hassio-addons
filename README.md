@@ -2,17 +2,17 @@
 
 Repository for hass.io addons.
 
-## Mopidy
+## [Mopidy](https://github.com/bestlibre/hassio-addons/tree/master/mopidy)
 Mopidy media player : working beta
 
-## Nginx Proxy
+## [Nginx Proxy](https://github.com/bestlibre/hassio-addons/tree/master/nginx_proxy)
 Nginx proxy with multiple vhosts and optional ssl : working beta
 
-## Certbot
+## [Certbot](https://github.com/bestlibre/hassio-addons/tree/master/certbot)
 Ssl certificats creation/renewal with let's encrypt : working beta
 
-## Influxdb
+## [Influxdb](https://github.com/bestlibre/hassio-addons/tree/master/influxdb)
 Influxdb server : WIP, not tested, waiting for external drive access for container
 
-## snapcast*
+## [snapcastserver](https://github.com/bestlibre/hassio-addons/tree/master/snapcastserver) and [snapcastclient](https://github.com/bestlibre/hassio-addons/tree/master/snapcastclient)
 snapcast server and client for multi room audio : WIP, not tested
