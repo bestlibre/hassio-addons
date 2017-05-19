@@ -7,10 +7,10 @@
     "startup": "before",
     "boot": "auto",
     "image": "bestlibre/{arch}-nginx-proxy",
-    "options": {"ssl": false},
+    "options": {"ssl": false, [{"vhost": "homeassistant.domain.tld", "port": "8123", "default_server": true}]},
     "schema": {
 	"ssl": "bool",
-	"vhosts": [{"vhost": "str", "port": "str", "fullchain": "str", "privkey": "str"}]
+	"vhosts": [{"vhost": "str", "port": "str", "default_server": "bool"}]
     },
     "ports": {"80/tcp": 80, "443/tcp": 443},
     "map": ["ssl"]
