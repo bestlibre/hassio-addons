@@ -7,7 +7,7 @@
     "startup": "before",
     "boot": "auto",
     "image": "bestlibre/{arch}-nginx-proxy",
-    "options": {"ssl": false, [{"vhost": "homeassistant.domain.tld", "port": "8123", "default_server": true}]},
+    "options": {"ssl": false, "vhosts":[{"vhost": "homeassistant.domain.tld", "port": "8123", "default_server": true}]},
     "schema": {
 	"ssl": "bool",
 	"vhosts": [{"vhost": "str", "port": "str", "default_server": "bool"}]
