@@ -4,10 +4,12 @@ services:
 before_install:
   - sudo apt-get install jq
 env:
+  - ARCH="armhf"
+  - ARCH="amd64"
   - ADDON="mopidy"
   - ADDON="influxdb"
   - ADDON="snapcastclient"
   - ADDON="snapcastserver"
 script:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
-  - ./build.sh $ADDON
+  - ./create_hassio_addon.sh -a $ARCH -s $ADDON -p -l .
