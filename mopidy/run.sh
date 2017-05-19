@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 local_scan=$(cat /data/options.json | jq -r '.local_scan // empty')
 options=$(cat /data/options.json | jq -r '[.options[] | "-o "+.name+"="+.value ] | join(" ")')
 

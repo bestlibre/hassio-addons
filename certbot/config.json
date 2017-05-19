@@ -1,0 +1,16 @@
+{
+    "name": "Certbot",
+    "version": "0.1",
+    "slug": "certbot",
+    "description": "Certbot compagnion for Nginx Proxy",
+    "url": "https://github.com/bestlibre/hassio-addons/tree/master/certbot",
+    "startup": "before",
+    "boot": "auto",
+    "image": "bestlibre/{arch}-certbot",
+    "options": {},
+    "schema": {
+	"email": "email",
+	"domains": ["str"]
+    },
+    "map": ["ssl:rw"]
+}
