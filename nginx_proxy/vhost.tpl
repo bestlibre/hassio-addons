@@ -21,8 +21,8 @@ server {
 	ssl_session_timeout 5m;
 	ssl_session_tickets off;
 
-	ssl_certificate /ssl/letsencrypt/${VHOST}/fullchain.pem;
-	ssl_certificate_key /ssl/letsencrypt/${VHOST}/privkey.pem;
+	ssl_certificate /ssl/letsencrypt/live/${VHOST}/fullchain.pem;
+	ssl_certificate_key /ssl/letsencrypt/live/${VHOST}/privkey.pem;
 
 	ssl_dhparam /data/dhparam.pem;
 
