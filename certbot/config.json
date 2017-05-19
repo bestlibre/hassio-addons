@@ -7,8 +7,13 @@
     "startup": "before",
     "boot": "auto",
     "image": "bestlibre/{arch}-certbot",
-    "options": {},
+    "options": {
+	"debug": false,
+	"email": "email@domain.tld",
+	"domains": ["homeassistant.domain.tld"]
+    },
     "schema": {
+	"debug": "bool",
 	"email": "email",
 	"domains": ["str"]
     },
