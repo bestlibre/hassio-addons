@@ -1,6 +1,7 @@
 server {
 	server_name ${VHOST};
-	listen [::]:80 ${DEFAULT_SERVER} ipv6only=off;
+  listen 80 ${DEFAULT_SERVER};
+	listen [::]:80 ${DEFAULT_SERVER};
 	location ~ /.well-known {
                 allow all;
 		root /ssl/wk/;
@@ -12,7 +13,8 @@ server {
 
 server {
 	server_name ${VHOST};
-	listen [::]:443 ssl http2 ${DEFAULT_SERVER} ipv6only=off;
+  listen 443 ssl http2 ${DEFAULT_SERVER};
+	listen [::]:443 ssl http2 ${DEFAULT_SERVER};
 
 	ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
 	ssl_ciphers 'EECDH+AESGCM:EDH+AESGCM:AES256+EECDH:AES256+EDH:!aNULL:!eNULL:!EXPORT:!DES:!MD5:!PSK:!RC4';
