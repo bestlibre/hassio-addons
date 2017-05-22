@@ -4,7 +4,7 @@
 
 This addon is intented to be used with [nginx_proxy](https://github.com/bestlibre/hassio-addons/tree/master/nginx_proxy). It will obtain and renew if necessary the certificats from [Let's encrypt](https://letsencrypt.org/) with [certbot](https://certbot.eff.org/). It use the webroot plugin and need `DOMAIN/.well-known` directories to be served from `/ssl/wk`. [nginx_proxy](https://github.com/bestlibre/hassio-addons/tree/master/nginx_proxy) does this for you.
 
-The certificats are created in `/ssl/letsencrypt/live/DOMAIN/`for each domain.
+The certificats are created in `/ssl/letsencrypt/live/$NAME/`for each certificat.
 
 ## Configuration
 
@@ -12,8 +12,10 @@ The certificats are created in `/ssl/letsencrypt/live/DOMAIN/`for each domain.
 
 Email address used for the registration
 
-### domains (list of string)
-
+### certificats (list of objects)
+#### name (str)
+Certificat name, for directory creation.
+#### domains (list of string)
 List of domains to create/renew certificats
 
 ### debug (bool)
