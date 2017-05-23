@@ -14,8 +14,8 @@ Nginx proxy with multiple vhosts and optional ssl : working beta
 
 Ssl certificats creation/renewal with let's encrypt : working beta
 
-## [Influxdb](https://github.com/bestlibre/hassio-addons/tree/master/influxdb)
-Influxdb server : WIP, not tested, waiting for external drive access for container
+## [Influxdb](https://github.com/bestlibre/hassio-addons/tree/master/influxdb) [![](https://images.microbadger.com/badges/version/bestlibre/armhf-influxdb.svg)](https://microbadger.com/images/bestlibre/armhf-influxdb "Get your own version badge on microbadger.com")
+Influxdb server : WIP, not tested
 
 ## [snapcastserver](https://github.com/bestlibre/hassio-addons/tree/master/snapcastserver) and [snapcastclient](https://github.com/bestlibre/hassio-addons/tree/master/snapcastclient)
 snapcast server and client for multi room audio : WIP, not tested
