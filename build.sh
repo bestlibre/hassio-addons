@@ -6,5 +6,5 @@ archs=$(jq -r '.arch // ["armhf","amd64","aarch64","i386"] | .[]' ${addon}/confi
 
 for arch in $archs
 do
-	echo ./create_hassio_addon.sh -a $arch -s $addon -p -l . 
+    ./create_hassio_addon.sh -a $arch -s $addon -p -l . 
 done
