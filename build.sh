@@ -1,7 +1,10 @@
 #!/bin/bash
 
 addon=$1
-for arch in "armhf" "amd64"
+
+archs=$(jq -r '.arch // ["armhf","amd64","aarch64","i386"] | .[]' ${addon}/config.json)
+
+for arch in $archs
 do
-	./create_hassio_addon.sh -a $arch -s $addon -p -l . 
+	echo ./create_hassio_addon.sh -a $arch -s $addon -p -l . 
 done
