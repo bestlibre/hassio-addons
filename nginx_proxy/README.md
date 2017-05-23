@@ -30,3 +30,6 @@ If not set, only http is proxified. If set, the template used for the vhosts for
 
 The key and certchain must be located in
 `/ssl/letsencrypt/live/${certname}/privkey.pem` and `/ssl/letsencrypt/live/${certname}/fullchain.pem`. A solution to obtain them is to used the [certbot addon](https://github.com/bestlibre/hassio-addons/tree/master/certbot).
+
+#### ssl_modern (bool)
+If certname is set, you can set this parameter to switch betwwen ssl profils. The profile are the ones defined by the [mozilla ssl config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/). Use the [modern one](https://wiki.mozilla.org/Security/Server_Side_TLS#Modern_compatibility) is set to `true`, the [intermediate one](https://wiki.mozilla.org/Security/Server_Side_TLS#Intermediate_compatibility_.28default.29) is set to `false`or not set.
