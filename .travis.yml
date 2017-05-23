@@ -4,6 +4,11 @@ services:
 before_install:
   - sudo apt-get install jq
 env:
+  - ADDON="mopidy"
+  - ADDON="influxdb"
+  - ADDON="snapcastclient"
+  - ADDON="snapcastserver"
+  - ADDON="nginx_proxy"
   - ADDON="certbot"
 script:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
