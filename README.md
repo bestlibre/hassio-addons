@@ -3,7 +3,7 @@
 Repository for hass.io addons.
 
 ## [Mopidy](https://github.com/bestlibre/hassio-addons/tree/master/mopidy)
-Mopidy media player : working beta
+Mopidy media player : working.
 
 ## [Nginx Proxy](https://github.com/bestlibre/hassio-addons/tree/master/nginx_proxy)
 Nginx proxy with multiple vhosts and optional ssl : working beta
@@ -16,3 +16,6 @@ Influxdb server : WIP, not tested, waiting for external drive access for contain
 
 ## [snapcastserver](https://github.com/bestlibre/hassio-addons/tree/master/snapcastserver) and [snapcastclient](https://github.com/bestlibre/hassio-addons/tree/master/snapcastclient)
 snapcast server and client for multi room audio : WIP, not tested
+
+## [Grafana for armhf](https://github.com/bestlibre/hassio-addons/tree/master/armhf-grafana-debian)
+Grafana server for armhf arch, debian based image : working.
