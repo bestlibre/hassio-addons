@@ -11,13 +11,13 @@
         "debug": false,
         "email": "email@domain.tld",
         "certificats":[{"name": "hass",
-                        "domains": ["homeassistant.domain.tld"] }]
+                        "domains": "homeassistant.domain.tld" }]
     },
     "schema": {
         "debug": "bool",
         "email": "email",
         "certificats": [{"name": "str",
-                         "domains": ["str"]}]
+                         "domains": "str"}]
     },
     "map": ["ssl:rw"]
 }
