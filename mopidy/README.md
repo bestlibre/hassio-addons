@@ -1,5 +1,12 @@
 # Mopidy addon for hass.io
 
+[![Build Status](https://travis-ci.org/bestlibre/hassio-addons.svg?branch=master)](https://travis-ci.org/bestlibre/hassio-addons)
+
+- armhf : [![](https://images.microbadger.com/badges/version/bestlibre/armhf-mopidy.svg)](https://microbadger.com/images/bestlibre/armhf-mopidy "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/bestlibre/armhf-mopidy.svg)](https://microbadger.com/images/bestlibre/armhf-mopidy "Get your own image badge on microbadger.com")
+- amd64 : [![](https://images.microbadger.com/badges/version/bestlibre/amd64-mopidy.svg)](https://microbadger.com/images/bestlibre/amd64-mopidy "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/bestlibre/amd64-mopidy.svg)](https://microbadger.com/images/bestlibre/amd64-mopidy "Get your own image badge on microbadger.com")
+- aarch64 : [![](https://images.microbadger.com/badges/version/bestlibre/aarch64-mopidy.svg)](https://microbadger.com/images/bestlibre/aarch64-mopidy "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/bestlibre/aarch64-mopidy.svg)](https://microbadger.com/images/bestlibre/aarch64-mopidy "Get your own image badge on microbadger.com")
+- i386 : [![](https://images.microbadger.com/badges/version/bestlibre/i386-mopidy.svg)](https://microbadger.com/images/bestlibre/i386-mopidy "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/bestlibre/i386-mopidy.svg)](https://microbadger.com/images/bestlibre/i386-mopidy "Get your own image badge on microbadger.com")
+
 ## Audio player for Home Assistant
 
 This addon for hass.io add audio playing capability to the host.
