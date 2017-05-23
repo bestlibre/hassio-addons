@@ -4,7 +4,8 @@ FROM %%BASE_IMAGE%%
 ENV LANG C.UTF-8
 
 # Setup base
-RUN apk add -U --no-cache jq certbot
+RUN apk add -U --no-cache jq \
+ && apk add -U --no-cache --repository http://nl.alpinelinux.org/alpine/edge/community certbot
 
 # Copy data
 COPY run.sh /
