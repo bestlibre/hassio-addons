@@ -6,6 +6,7 @@ if [ "$ssl" == "true" ]; then
         openssl dhparam -dsaparam -out /data/dhparam.pem 4096
     fi
 fi
-mustache-cli /data/options.json /templates/vhost.mustache
+
+mustache-cli /data/options.json /templates/vhost.mustache > /etc/nginx/conf.d/vhosts.conf
 
 nginx
