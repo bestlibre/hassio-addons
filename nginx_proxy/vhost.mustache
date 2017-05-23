@@ -7,7 +7,7 @@ server {
                 allow all;
 		root /ssl/wk/;
         }
-{{#ssl}}
+{{#certname}}
 
 	location / {
 		return 301 https://$host$request_uri;
@@ -35,7 +35,7 @@ server {
                 allow all;
 		root /ssl/wk/;
         }
-{{/ssl}}
+{{/certname}}
 	location / {
 		 proxy_pass http://{{#remote}}{{remote}}{{/remote}}{{^remote}}172.17.0.1{{/remote}}:{{port}};
 	}

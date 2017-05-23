@@ -20,7 +20,7 @@
 	     "remote": "str",
 	     "port": "str",
 	     "default_server": "bool",
-	     "ssl": {"certname":"str"}
+	     "certname":"str"
 	    }
 	]
     },

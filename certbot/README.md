@@ -15,8 +15,8 @@ Email address used for the registration
 ### certificats (list of objects)
 #### name (str)
 Certificat name, for directory creation.
-#### domains (list of string)
-List of domains to create/renew certificats
+#### domains (str)
+List of domains to create/renew certificats, comma separated
 
 ### debug (bool)
 

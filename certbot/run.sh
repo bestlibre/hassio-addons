@@ -11,7 +11,7 @@ DEBUG=$(jq --raw-output ".debug // empty" $CONFIG_PATH)
 mkdir -p /ssl/wk
 
 while true; do
-    jq -r '.certificats[] | .name + " " + (.domains | join(","))' $CONFIG_PATH |
+    jq -r '.certificats[] | .name + " " + .domains' $CONFIG_PATH |
 	while read name domains; do
             certbot certonly --webroot -w /ssl/wk/ --non-interactive --email "$EMAIL" --agree-tos --config-dir "$CERT_DIR" --work-dir "$WORK_DIR" --cert-name $name -d ${domains}
             if [ "$DEBUG" == "true" ]; then
