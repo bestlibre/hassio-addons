@@ -9,6 +9,7 @@
     "boot": "auto",
     "ports": {"3000/tcp": 3000},
     "environment": {"GF_PATHS_DATA":"/data", "GF_PATHS_PLUGINS":"/data/plugins"},
+    "arch": ["armhf"],
     "options": {},
     "schema": {}
 }
