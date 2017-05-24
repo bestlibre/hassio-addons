@@ -1,0 +1,14 @@
+{
+    "name": "Syncthing",
+    "version": "beta",
+    "slug": "syncthing",
+    "description": "syncthing synchronization service",
+    "url": "https://github.com/bestlibre/hassio-addons/tree/master/syncthing",
+    "startup": "before",
+    "boot": "auto",
+    "image": "bestlibre/{arch}-syncthing",
+    "options": {},
+    "schema": {},
+    "ports": {"8384/tcp": 8384},
+    "map": ["share:rw"]
+}

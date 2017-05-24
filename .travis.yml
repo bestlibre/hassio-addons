@@ -10,6 +10,7 @@ env:
   - ADDON="snapcastserver"
   - ADDON="nginx_proxy"
   - ADDON="certbot"
+  - ADDON="syncthing"
 script:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - ./build.sh $ADDON
