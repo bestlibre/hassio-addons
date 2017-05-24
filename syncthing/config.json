@@ -1,6 +1,6 @@
 {
     "name": "Syncthing",
-    "version": "beta",
+    "version": "0.14.28",
     "slug": "syncthing",
     "description": "syncthing synchronization service",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/syncthing",
