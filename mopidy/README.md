@@ -13,6 +13,8 @@ Mopidy is built with those extensions :
 
 The local media can be stored on /share (which allow an access through the samba addon). By default the directory for media is /share/mopidy/media. Since /share is read-only, the directory must be created from another addon or directly on the host.
 
+Mopidy listen on `6680` for http connection, and `6600` for mpd ones.
+
 ## Configuration
 ### local_scan (bool)
 If it is set to true, a local scan is performed on startup.
