@@ -38,7 +38,8 @@ Options:
         Load addon from a local folder
     -s, --slug addon_slug
         Name of folder/slug
-
+    -i, --base-image
+        Base image to be used
     -a, --arch armhf|aarch64|i386|amd64
         Arch for addon build.
     -p, --push
@@ -76,6 +77,10 @@ while [[ $# -gt 0 ]]; do
             ARCH=$2
             shift
             ;;
+	-i|--base-image)
+	    BASE_IMAGE=$2
+	    shift
+	    ;;
         -p|--push)
             DOCKER_PUSH="true"
             ;;
@@ -106,7 +111,9 @@ pushd "$(dirname "$0")" > /dev/null 2>&1
 SCRIPTPATH=$(pwd)
 popd > /dev/null 2>&1
 
-BASE_IMAGE="resin\/$ARCH-alpine:3.5"
+if [ -z "$BASE_IMAGE" ]; then
+    BASE_IMAGE="resin\/$ARCH-alpine:3.5"
+fi
 BUILD_DIR=${BUILD_DIR:=$SCRIPTPATH}
 WORKSPACE=${BUILD_DIR:=$SCRIPTPATH}/hassio-supervisor-$ARCH
 ADDON_WORKSPACE=$WORKSPACE/$SLUG
@@ -138,6 +145,7 @@ DOCKER_TAG=$(jq --raw-output ".version" "$ADDON_WORKSPACE/config.json")
 DOCKER_IMAGE=$(jq --raw-output ".image // empty" "$ADDON_WORKSPACE/config.json")
 
 sed -i "s/%%BASE_IMAGE%%/${BASE_IMAGE}/g" "$ADDON_WORKSPACE/Dockerfile"
+sed -i "s/%%ARCH%%/${ARCH}/g" "$ADDON_WORKSPACE/Dockerfile"
 sed -i "s/%%VERSION%%/${DOCKER_TAG}/g" "$ADDON_WORKSPACE/Dockerfile"
 echo "LABEL io.hass.version=\"$DOCKER_TAG\" io.hass.arch=\"$ARCH\" io.hass.type=\"addon\"" >> "$ADDON_WORKSPACE/Dockerfile"
 
