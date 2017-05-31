@@ -4,7 +4,7 @@ FROM %%BASE_IMAGE%%
 ENV LANG C.UTF-8
 ENV GOPATH /opt/go
 
-ENV SYNCTHING_VERSION v0.14.28
+ENV SYNCTHING_VERSION v0.14.29
 # Setup base
 RUN apk add --no-cache -U --virtual .build-deps \
         build-base \
