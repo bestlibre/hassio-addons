@@ -1,6 +1,6 @@
 {
     "name": "Mopidy and Snapcast",
-    "version": "0.1.1-1",
+    "version": "0.1.1-2",
     "slug": "mopidy-cast",
     "description": "mopidy music server with snapcast server",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/mopidy_cast",
@@ -13,7 +13,7 @@
 	"options": [{"name": "str", "value": "str"}]
     },
     "devices": [],
-    "ports": {"6680/tcp": 6681, "6600/tcp": 6601, "1704/tcp": 1704},
+    "ports": {"6680/tcp": 6681, "6600/tcp": 6601, "1704/tcp": 1704, "1705/tcp": 1705},
     "map": ["share"],
     "arch": ["amd64", "armhf", "i386"],
     "tmpfs": "size=10m,rw"

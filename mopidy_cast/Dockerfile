@@ -19,7 +19,7 @@ COPY mopidy_cast.conf /var/lib/mopidy/.config/mopidy/mopidy_cast.conf
 COPY run.sh /
 RUN chmod a+x /run.sh
 
-EXPOSE 6600 6680 1704
+EXPOSE 6600 6680 1704 1705
 
 
 CMD [ "/run.sh" ]
