@@ -1,6 +1,6 @@
 {
     "name": "Grafana",
-    "version": "v4.2.0",
+    "version": "v4.3.2",
     "slug": "grafana",
     "image": "fg2it/grafana-armhf",
     "description": "Grafana addon for armhf arch. Image based on debian",
