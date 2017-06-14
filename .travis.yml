@@ -4,8 +4,7 @@ services:
 before_install:
   - sudo apt-get install jq
 env:
-  - ADDON="mopidy"
-  - ADDON="mopidy_cast"
+  - ADDON="mopidy mopidy_cast"
   - ADDON="influxdb"
   - ADDON="snapcastclient"
   - ADDON="snapcastserver"
