@@ -1,6 +1,6 @@
 {
   "name": "snapcast-client",
-  "version": "beta",
+  "version": "beta-1",
   "slug": "snapcastclient",
   "description": "Snapcast client for multiroom audio diffusion",
   "startup": "before",
