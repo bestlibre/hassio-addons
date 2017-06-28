@@ -1,6 +1,6 @@
 {
     "name": "Certbot",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "slug": "certbot",
     "description": "Certbot compagnion for Nginx Proxy",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/certbot",
