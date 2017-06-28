@@ -13,6 +13,19 @@ The certificats are created in `/ssl/letsencrypt/live/$NAME/`for each certificat
 
 Email address used for the registration
 
+### ssl-only (bool)
+
+Option to use this addon in a situation where the certbot ``webroot`` plugin is not usable (ie no access on port 80). This option will anable the ``standalone`` plugin with the ``--preferred-challenges tls-sni`` option. Port 443 inside the addon is exposed as 10443 on the host. You can use the [nginx proxy addon](https://github.com/bestlibre/hassio-addons/tree/master/nginx_proxy) to proxify it back to 443.
+
+Some extra actions are needed to use this method, since you cannot proxify both the service behind a given virtual host and certbot at the same time :
+
+-  modify the nginx_proxy configuration to proxify 443 to 10443,
+-  start the certbot addon,
+-  wait for the certificats to be created/renewed,
+-  stop the addon,
+-  revert the nginx conf
+
+
 ### certificats (list of objects)
 #### name (str)
 Certificat name, for directory creation.

@@ -1,6 +1,6 @@
 {
     "name": "Certbot",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "slug": "certbot",
     "description": "Certbot compagnion for Nginx Proxy",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/certbot",
@@ -11,13 +11,16 @@
         "debug": false,
         "email": "email@domain.tld",
         "certificats":[{"name": "hass",
-                        "domains": "homeassistant.domain.tld" }]
+                        "domains": "homeassistant.domain.tld" }],
+	"ssl-only": false
     },
     "schema": {
         "debug": "bool",
         "email": "email",
         "certificats": [{"name": "str",
-                         "domains": "str"}]
+                         "domains": "str"}],
+	"ssl-only": "bool"
     },
-    "map": ["ssl:rw"]
+    "map": ["ssl:rw"],
+    "ports": {"443/tcp": 10443}
 }
