@@ -38,8 +38,6 @@ Options:
         Load addon from a local folder
     -s, --slug addon_slug
         Name of folder/slug
-    -i, --base-image
-        Base image to be used
     -a, --arch armhf|aarch64|i386|amd64
         Arch for addon build.
     -p, --push
@@ -77,10 +75,6 @@ while [[ $# -gt 0 ]]; do
             ARCH=$2
             shift
             ;;
-	-i|--base-image)
-	    BASE_IMAGE=$2
-	    shift
-	    ;;
         -p|--push)
             DOCKER_PUSH="true"
             ;;
@@ -111,9 +105,7 @@ pushd "$(dirname "$0")" > /dev/null 2>&1
 SCRIPTPATH=$(pwd)
 popd > /dev/null 2>&1
 
-if [ -z "$BASE_IMAGE" ]; then
-    BASE_IMAGE="resin\/$ARCH-alpine:3.5"
-fi
+BASE_IMAGE="homeassistant\/$ARCH-base:latest"
 BUILD_DIR=${BUILD_DIR:=$SCRIPTPATH}
 WORKSPACE=${BUILD_DIR:=$SCRIPTPATH}/hassio-supervisor-$ARCH
 ADDON_WORKSPACE=$WORKSPACE/$SLUG
