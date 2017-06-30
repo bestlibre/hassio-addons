@@ -7,7 +7,7 @@ CONFIG_PATH=/data/options.json
 
 EMAIL=$(jq --raw-output ".email" $CONFIG_PATH)
 DEBUG=$(jq --raw-output ".debug // empty" $CONFIG_PATH)
-SSL_ONLY=$(jq --raw-output ".ssl-only // empty" $CONFIG_PATH)
+SSL_ONLY=$(jq --raw-output ".ssl_only // empty" $CONFIG_PATH)
 
 mkdir -p /ssl/wk
 if [ "${SSL_ONLY}" == "true" ]; then
