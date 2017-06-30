@@ -132,13 +132,13 @@ echo "[INFO] Setup dockerfile"
 
 sed -i "s/{arch}/${ARCH}/g" "$ADDON_WORKSPACE/config.json"
 DOCKER_TAG=$(jq --raw-output ".version" "$ADDON_WORKSPACE/config.json")
-
+UPSTREAM_VERSION=${DOCKER_TAG%-*}
 # if set custom image in file
 DOCKER_IMAGE=$(jq --raw-output ".image // empty" "$ADDON_WORKSPACE/config.json")
 
 sed -i "s/%%BASE_IMAGE%%/${BASE_IMAGE}/g" "$ADDON_WORKSPACE/Dockerfile"
 sed -i "s/%%ARCH%%/${ARCH}/g" "$ADDON_WORKSPACE/Dockerfile"
-sed -i "s/%%VERSION%%/${DOCKER_TAG}/g" "$ADDON_WORKSPACE/Dockerfile"
+sed -i "s/%%UPSTREAM_VERSION%%/${UPSTREAM_VERSION}/g" "$ADDON_WORKSPACE/Dockerfile"
 echo "LABEL io.hass.version=\"$DOCKER_TAG\" io.hass.arch=\"$ARCH\" io.hass.type=\"addon\"" >> "$ADDON_WORKSPACE/Dockerfile"
 
 # Run build
