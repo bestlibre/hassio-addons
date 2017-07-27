@@ -13,4 +13,12 @@ curl -i -XPOST http://hassio.local:8086/query --data-urlencode "q=CREATE DATABAS
 ```
 
 ## Configuration
-There are no configuration options.
+
+### env_var (dict)
+
+This variable can be used to set environment variable before launching influxdb, and thus setting configuration variable. The list of variables is [here](https://docs.influxdata.com/influxdb/v1.3/administration/config). 
+
+For exemple, to enable authentication :
+``` python
+{"env_var": [{"name": "INFLUXDB_HTTP_AUTH_ENABLED", "value": "true"}]
+```

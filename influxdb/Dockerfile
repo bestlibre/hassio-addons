@@ -4,6 +4,7 @@ ENV LANG C.UTF-8
 
 #Install influxdb
 RUN apk upgrade --no-cache --available \
+ && apk add -U --no-cache jq \
  && apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/testing \
         influxdb
 
