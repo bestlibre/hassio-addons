@@ -3,6 +3,8 @@ FROM %%BASE_IMAGE%%
 # Add env
 ENV LANG C.UTF-8
 ENV ARCH %%ARCH%%
+ENV GOPATH /opt/go
+
 # Setup base
 
 RUN apk add --no-cache -U --virtual .build-deps \
