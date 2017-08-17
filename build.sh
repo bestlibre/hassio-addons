@@ -6,7 +6,7 @@ do
 	archs=$(jq -r '.arch // ["armhf","amd64","aarch64","i386"] | .[]' ${addon}/config.json)
 	for arch in $archs
 	do
-	    ./create_hassio_addon.sh -a $arch -s $addon -p -l .
+	    ./create_hassio_addon.sh -a $arch -s $addon -l .
 	done
     else
 	echo "No change in commit range $TRAVIS_COMMIT_RANGE"
