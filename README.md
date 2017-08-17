@@ -14,6 +14,9 @@ Nginx proxy with multiple vhosts and optional ssl : working
 
 Ssl certificats creation/renewal with let's encrypt : working
 
+## [Caddy Proxy](https://github.com/bestlibre/hassio-addons/tree/master/caddy_proxy) [![](https://images.microbadger.com/badges/version/bestlibre/armhf-caddy-proxy.svg)](https://microbadger.com/images/bestlibre/armhf-caddy-proxy "Get your own version badge on microbadger.com")
+Caddy proxy with multiple vhosts and automatic ssl : working
+
 ## [Influxdb](https://github.com/bestlibre/hassio-addons/tree/master/influxdb) [![](https://images.microbadger.com/badges/version/bestlibre/armhf-influxdb.svg)](https://microbadger.com/images/bestlibre/armhf-influxdb "Get your own version badge on microbadger.com")
 Influxdb server : working
 
