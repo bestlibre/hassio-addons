@@ -3,7 +3,7 @@
   "version": "beta",
   "slug": "snapcastserver",
   "description": "Snapcast server for multiroom audio diffusion",
-  "startup": "before",
+  "startup": "system",
   "boot": "auto",
   "image": "bestlibre/{arch}-snapcast-server",
   "options": {},

@@ -5,7 +5,7 @@
     "image": "fg2it/grafana-armhf",
     "description": "Grafana addon for armhf arch. Image based on debian",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/armhf_grafana_debian",
-    "startup": "before",
+    "startup": "system",
     "boot": "auto",
     "ports": {"3000/tcp": 3000},
     "environment": {"GF_PATHS_DATA":"/data", "GF_PATHS_PLUGINS":"/data/plugins"},

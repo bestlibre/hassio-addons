@@ -4,7 +4,7 @@
     "slug": "syncthing",
     "description": "syncthing synchronization service",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/syncthing",
-    "startup": "before",
+    "startup": "system",
     "boot": "auto",
     "image": "bestlibre/{arch}-syncthing",
     "options": {},

@@ -4,7 +4,7 @@
     "slug": "mopidy-cast",
     "description": "mopidy music server with snapcast server",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/mopidy_cast",
-    "startup": "after",
+    "startup": "application",
     "boot": "auto",
     "image": "bestlibre/{arch}-mopidy-cast",
     "options": {"local_scan": true},
