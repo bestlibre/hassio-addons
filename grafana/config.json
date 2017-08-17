@@ -1,7 +1,7 @@
 {
-    "name": "Grafana",
+    "name": "Grafana Multiarch",
     "version": "4.3.2",
-    "slug": "grafana",
+    "slug": "grafana_multiarch",
     "image": "bestlibre/{arch}-grafana",
     "description": "Grafana addon. Image based on upstream docker images. The version used is the greater common version between the official amd64 image and the f2git one for armhf",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/grafana",
