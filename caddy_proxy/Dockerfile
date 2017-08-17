@@ -28,18 +28,12 @@ RUN apk add --no-cache -U --virtual .build-deps \
       "https://caddyserver.com/download/$caddyurl" \
     | tar --no-same-owner -C /usr/local/bin/ -xz caddy \
  && chmod 0755 /usr/local/bin/caddy \
- && addgroup -S caddy \
- && adduser -D -S -H -s /sbin/nologin -G caddy caddy \
-
  && apk del .build-deps
-
 
 # Copy data
 COPY run.sh /
 COPY vhost.mustache /templates/
 
 RUN chmod a+x /run.sh
-
-USER caddy
 
 CMD [ "/run.sh" ]

@@ -1,8 +1,10 @@
 {{#vhosts}}
 {{vhost}} {
-    proxy / {{remote}}:{{port}} {
+    proxy / {{#remote}}{{remote}}{{/remote}}{{^remote}}172.17.0.1{{/remote}}:{{port}} {
       transparent
       websocket
     }
+    log stdout
+    errors stdout
 }
 {{/vhosts}}
