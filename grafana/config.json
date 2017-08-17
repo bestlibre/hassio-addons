@@ -1,0 +1,15 @@
+{
+    "name": "Grafana",
+    "version": "v4.3.2",
+    "slug": "grafana",
+    "image": "bestlibre/{arch}-grafana",
+    "description": "Grafana addon. Image based on upstream docker images. The version used is the greater common version between the official amd64 image and the f2git one for armhf",
+    "url": "https://github.com/bestlibre/hassio-addons/tree/master/grafana",
+    "startup": "system",
+    "boot": "auto",
+    "ports": {"3000/tcp": 3000},
+    "environment": {"GF_PATHS_DATA":"/data", "GF_PATHS_PLUGINS":"/data/plugins"},
+    "arch": ["armhf", "amd64"],
+    "options": {},
+    "schema": {}
+}
