@@ -4,6 +4,7 @@ FROM %%BASE_IMAGE%%
 ENV LANG C.UTF-8
 ENV ARCH %%ARCH%%
 ENV GOPATH /opt/go
+ENV CADDY_VERSION v%%UPSTREAM_VERSION%%
 
 # Setup base
 
@@ -18,14 +19,15 @@ RUN apk add --no-cache -U --virtual .build-deps \
  && go get -u github.com/quantumew/mustache-cli \
  && cp $GOPATH/bin/* /usr/local/bin/ \
  && rm -rf $GOPATH \
- && if [ $ARCH == "armhf" ]; then caddyurl=linux/arm7;\
-    elif [ $ARCH == "amd64" ]; then caddyurl=linux/amd64;\
-    elif [ $ARCH == "i386" ]; then caddyurl=linux/386;\
-    elif [ $ARCH == "aarch64" ]; then caddyurl=linux/arm64;\
+ && if [ $ARCH == "armhf" ]; then caddyarch=arm7;\
+    elif [ $ARCH == "amd64" ]; then caddyarch=amd64;\
+    elif [ $ARCH == "i386" ]; then caddyarch=386;\
+    elif [ $ARCH == "aarch64" ]; then caddyarch=arm64;\
     fi \
+ && caddyurl=https://github.com/mholt/caddy/releases/download/${CADDY_VERSION}/caddy_${CADDY_VERSION}_linux_${caddyarch}.tar.gz \
  && echo $caddyurl \
  && curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
-      "https://caddyserver.com/download/$caddyurl" \
+      "$caddyurl" \
     | tar --no-same-owner -C /usr/local/bin/ -xz caddy \
  && chmod 0755 /usr/local/bin/caddy \
  && apk del .build-deps
