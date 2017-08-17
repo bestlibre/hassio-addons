@@ -1,0 +1,8 @@
+{{#vhosts}}
+{{vhost}} {
+    proxy / {{remote}}:{{port}} {
+      transparent
+      websocket
+    }
+}
+{{/vhosts}}
