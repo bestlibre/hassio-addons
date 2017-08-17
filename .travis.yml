@@ -11,6 +11,8 @@ env:
   - ADDON="nginx_proxy"
   - ADDON="certbot"
   - ADDON="syncthing"
+  - ADDON="caddy_proxy"
+  - ADDON="grafana"
 script:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - ./build.sh $ADDON
