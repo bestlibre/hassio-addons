@@ -19,7 +19,7 @@ RUN apk add --no-cache --virtual .build-deps \
  && pip install -U pip \
  && pip install \
         mopidy \
-    	pyasn1==0.1.8 \
+    	pyasn1 \
         Mopidy-Moped \
         Mopidy-GMusic \
 	Mopidy-Local-SQLite \
