@@ -3,7 +3,7 @@
     "version": "v4.3.2",
     "slug": "grafana_armonly",
     "image": "fg2it/grafana-armhf",
-    "description": "Grafana addon for armhf arch. Image based on debian",
+    "description": "**DEPRECATED ADDON : Use the [multiarch one](https://github.com/bestlibre/hassio-addons/tree/master/grafana) instead**",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/armhf_grafana_debian",
     "startup": "system",
     "boot": "auto",
