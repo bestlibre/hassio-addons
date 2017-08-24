@@ -55,17 +55,12 @@ will become
 To get the GMusic addon working add this to your Options:
 ````
 {
-  "local_scan": true,
-  "options": [
-    {
-      "name": "gmusic/username",
-      "value": "YourUserName"
-    },
-    {
-      "name": "gmusic/password",
-      "value": "ApplicationPassword"
-    }
-  ]
+   "name": "gmusic/username",
+   "value": "YourUserName"
+},
+{
+	"name": "gmusic/password",
+	"value": "ApplicationPassword"
 }
 ````
 You can generate your application password as described here: https://support.google.com/accounts/answer/185833?hl=en 

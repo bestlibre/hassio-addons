@@ -34,3 +34,54 @@ The key and certchain must be located in
 
 #### ssl_modern (bool)
 If certname is set, you can set this parameter to switch betwwen ssl profils. The profile are the ones defined by the [mozilla ssl config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/). Use the [modern one](https://wiki.mozilla.org/Security/Server_Side_TLS#Modern_compatibility) is set to `true`, the [intermediate one](https://wiki.mozilla.org/Security/Server_Side_TLS#Intermediate_compatibility_.28default.29) is set to `false`or not set.
+
+## Usage exemple
+I proxyfy 4 services, 3 local to the pi, one on another host. My configs, for 4 subdomains, with two different certs (one for each physical hosts) are :
+
+### nginx proxy :
+````
+{
+  "vhosts": [
+    {
+      "vhost": "sub1.redacted.tld",
+      "default_server": true,
+      "certname": "rpi",
+      "port": "8123"
+    },
+    {
+      "vhost": "sub2.redacted.tld",
+      "port": "3380",
+      "default_server": false,
+      "certname": "rpi"
+    },
+    {
+      "vhost": "sub3.redacted.tld",
+      "certname": "rpi",
+      "port": "3000"
+    },
+    {
+      "remote": "192.168.0.2",
+      "vhost": "sub4.redacted.tld",
+      "certname": "nas",
+      "port": "443"
+    }
+  ]
+}
+````
+### certbot :
+````
+{
+  "email": "contact@redacted.tld",
+  "certificats": [
+    {
+      "domains": "sub1.redacted.tld,sub2.redacted.tld,sub3.redacted.tld",
+      "name": "rpi"
+    },
+    {
+      "domains": "sub3.redacted.tld",
+      "name": "nas"
+    }
+  ],
+  "ssl_only": false
+}
+````

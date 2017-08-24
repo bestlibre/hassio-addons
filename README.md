@@ -20,12 +20,16 @@ Caddy proxy with multiple vhosts and automatic ssl : working
 ## [Influxdb](https://github.com/bestlibre/hassio-addons/tree/master/influxdb) [![](https://images.microbadger.com/badges/version/bestlibre/armhf-influxdb.svg)](https://microbadger.com/images/bestlibre/armhf-influxdb "Get your own version badge on microbadger.com")
 Influxdb server : working
 
+## [Grafana](https://github.com/bestlibre/hassio-addons/tree/master/grafana) [![](https://images.microbadger.com/badges/version/bestlibre/armhf-grafana.svg)](https://microbadger.com/images/bestlibre/armhf-grafana "Get your own version badge on microbadger.com")
+Grafana server for armhf and amd64 archs, debian based image : working.
+
 ## [snapcastserver](https://github.com/bestlibre/hassio-addons/tree/master/snapcastserver) and [snapcastclient](https://github.com/bestlibre/hassio-addons/tree/master/snapcastclient)
 snapcast server and client for multi room audio : WIP, not tested
 
-## [Grafana for armhf](https://github.com/bestlibre/hassio-addons/tree/master/armhf-grafana-debian)
-Grafana server for armhf arch, debian based image : working.
-
 ## [Syncthing](https://github.com/bestlibre/hassio-addons/tree/master/syncthing) [![](https://images.microbadger.com/badges/version/bestlibre/armhf-syncthing.svg)](https://microbadger.com/images/bestlibre/armhf-syncthing "Get your own version badge on microbadger.com")
 Syncthing synchronization service : working.
+
+## [Grafana for armhf](https://github.com/bestlibre/hassio-addons/tree/master/armhf-grafana-debian)
+Grafana server for armhf arch, debian based image : **deprecated**.
+
 
