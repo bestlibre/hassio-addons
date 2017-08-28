@@ -76,11 +76,14 @@ To get the Spotify addon working add this:
 
 Before starting Mopidy, you must add your Spotify Premium username and password to your Mopidy configuration file and also visit https://www.mopidy.com/authenticate/#spotify to authorize this extension against your Spotify account:
 ````
-[spotify]
-username = alice
-password = secret
-client_id = ... client_id value you got from mopidy.com ...
-client_secret = ... client_secret value you got from mopidy.com ...
+{
+   "name": "spotify/username",
+   "value": "YourUserName"
+},
+{
+	"name": "spotify/password",
+	"value": "ApplicationPassword"
+}
 ````
 The following configuration values are available:
 ````
