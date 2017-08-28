@@ -41,11 +41,6 @@ hostname = 0.0.0.0
 [mpd]
 hostname = 0.0.0.0
 
-[spotify]
-username = 
-password = 
-client_id = 
-client_secret = 
 ````
 
 To add other options, or overwrite existing ones, you need to add them as elements in this list. Each item must be a dict with a "name" and a "value" element.
