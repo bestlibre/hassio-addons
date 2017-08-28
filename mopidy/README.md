@@ -83,7 +83,7 @@ client_id = ... client_id value you got from mopidy.com ...
 client_secret = ... client_secret value you got from mopidy.com ...
 
 The following configuration values are available:
-
+````
 spotify/enabled: If the Spotify extension should be enabled or not. Defaults to true.
 spotify/username: Your Spotify Premium username. You must provide this.
 spotify/password: Your Spotify Premium password. You must provide this.
@@ -100,3 +100,4 @@ spotify/search_artist_count: Maximum number of artists returned in search result
 spotify/search_track_count: Maximum number of tracks returned in search results. Number between 0 and 50. Defaults to 50.
 spotify/toplist_countries: Comma separated list of two letter ISO country codes to get toplists for. Defaults to blank, which is interpreted as all countries that Spotify is available in.
 spotify/private_session: Whether to use a private Spotify session. Turn on private session to disable sharing of played tracks with friends through the Spotify activity feed, Last.fm scrobbling, and Facebook. This only affects social sharing done by Spotify, not by other Mopidy extensions. Defaults to false.
+````
