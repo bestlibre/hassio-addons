@@ -20,7 +20,7 @@
 	       "ssl": "bool",
 	       "salt": "str",
 	       "cipherssed": "str",
-	       "url": "url",
+	       "url": "str",
 	       "db_host": "str",
 	       "db_port": "port",
 	       "db_user": "str",
