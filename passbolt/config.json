@@ -7,7 +7,7 @@
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/passbolt",
     "startup": "system",
     "boot": "auto",
-    "ports": {"80/tcp": "None", "443/tcp": "None"},
+    "ports": {"80/tcp": null, "443/tcp": null},
     "arch": ["armhf", "amd64"],
     "options": {},
     "schema": {"key_length": "int",
