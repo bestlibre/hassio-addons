@@ -23,7 +23,6 @@ RUN apk add --no-cache --virtual .build-deps \
         Mopidy-Moped \
         Mopidy-GMusic \
 	Mopidy-Local-SQLite \
-        Mopidy-Spotify \
  && apk del .build-deps
 
 COPY mopidy.conf /var/lib/mopidy/.config/mopidy/mopidy.conf
