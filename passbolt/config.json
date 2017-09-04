@@ -2,7 +2,7 @@
     "name": "Passbolt",
     "version": "1.6.3",
     "slug": "passbolt",
-    "image": "bestlibre/amd64-passbolt",
+    "image": "bestlibre/{arch}-passbolt",
     "description": "Passbolt password manager",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/passbolt",
     "startup": "system",

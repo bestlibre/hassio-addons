@@ -215,11 +215,6 @@ email_cron_job() {
   crond -f -c /etc/crontabs
 }
 
-
-
-ln -s $SSL_KEY $ssl_key
-ln -s $SSL_CERT $ssl_cert
-
 if [ ! -d /data/images ]; then
     mkdir /data/images
     ln -s /data/images /var/www/passbolt/app/webroot/img/public/images
@@ -227,7 +222,17 @@ fi
 
 if [ ! -d /data/gpg ]; then
     mkdir -p /data/gpg
+    chown nginx /data/gpg
 fi
+
+if [ ! -d /data/ssl ]; then
+    mkdir -p /data/ssl
+    chown nginx /data/ssl
+fi
+
+ln -s $SSL_KEY $ssl_key
+ln -s $SSL_CERT $ssl_cert
+
 ln -s {/data/,/var/www/passbolt/app/Config/}gpg/serverkey.asc
 ln -s {/data/,/var/www/passbolt/app/Config/}gpg/serverkey.private.asc
 
