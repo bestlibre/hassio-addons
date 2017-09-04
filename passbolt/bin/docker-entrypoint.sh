@@ -13,7 +13,7 @@ KEY_EXPIRATION=$(jq -r '.key_expiration // empty' /data/options.json)
 
 FINGERPRINT=$(jq -r '.fingerprint // empty' /data/options.json)
 REGISTRATION=$(jq -r '.registration // empty' /data/options.json)
-SSL=$(jq -r '.ssl // empty' /data/options.json)
+SSL=$(jq -r 'if .ssl? then "true" else "false" end' /data/options.json)
 
 #Core file variables
 

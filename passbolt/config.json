@@ -1,6 +1,6 @@
 {
     "name": "Passbolt",
-    "version": "1.6.3",
+    "version": "1.6.4",
     "slug": "passbolt",
     "image": "bestlibre/{arch}-passbolt",
     "description": "Passbolt password manager",
