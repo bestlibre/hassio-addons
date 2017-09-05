@@ -3,7 +3,7 @@
 
 ## Description
 
-This addon provide an influxdb database to store data from homeassistant and/or use it for data retrieval.
+This addon provide an influxdb database to [store data from homeassistant](https://home-assistant.io/components/influxdb/) and/or use it for [data retrieval](https://home-assistant.io/components/sensor.influxdb/).
 
 The data are stored in the addon /data volume. You can create a backup with the `influxd`command. See the documentation [here](https://docs.influxdata.com/influxdb/v1.2/administration/backup_and_restore/) and especialy the [remote backups section](https://docs.influxdata.com/influxdb/v1.2/administration/backup_and_restore/#remote-backups).
 
