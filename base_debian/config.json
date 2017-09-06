@@ -1,0 +1,11 @@
+{
+    "name": "debian base image",
+    "version": "stretch",
+    "slug": "debian_base",
+    "image": "bestlibre/{arch}-debian-base",
+    "description": "Base debian image with qemu_static. Not really an addon perse. To be used to create addons",
+    "url": "https://github.com/bestlibre/hassio-addons/tree/master/base_debian",
+    "arch": ["armhf", "aarch64"],
+    "options": {},
+    "schema": {}
+}
