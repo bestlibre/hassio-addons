@@ -1,29 +1,42 @@
-FROM %%BASE_IMAGE%%
+#armhf:FROM bestlibre/armhf-debian-base:stretch
+#aarch64:FROM bestlibre/aarch64-debian-base:stretch
+#amd64:FROM debian:stretch
+#i386:FROM i386/debian:stretch
 
 ENV LANG C.UTF-8
 
 #Install mopidy
-RUN apk add --no-cache --virtual .build-deps \
- 	build-base \
-	git \
- && apk add --no-cache \
-        ca-certificates \
-        gst-plugins-bad1 \
-        gst-plugins-good1 \
-        gst-plugins-ugly1 \
+
+RUN set -ex \
+    # Official Mopidy install for Debian/Ubuntu along with some extensions
+    # (see https://docs.mopidy.com/en/latest/installation/debian/ )
+ && apt-get update \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+	build-essential \
+        curl \
+        gcc \
+	gstreamer1.0-alsa \
 	jq \
-        py-gst1 \
-        py-pip \
-        python \
-	python-dev \
- && pip install -U pip \
+	python-crypto \
+ && curl -L https://apt.mopidy.com/mopidy.gpg -o /tmp/mopidy.gpg \
+ && curl -L https://apt.mopidy.com/mopidy.list -o /etc/apt/sources.list.d/mopidy.list \
+ && apt-key add /tmp/mopidy.gpg \
+ && apt-get update \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        jq mopidy mopidy-spotify mopidy-local-sqlite \
+ && curl -L https://bootstrap.pypa.io/get-pip.py | python - \
+ && pip install -U six \
  && pip install \
-        mopidy \
-    	pyasn1 \
+	pyasn1 \
         Mopidy-Moped \
         Mopidy-GMusic \
-	Mopidy-Local-SQLite \
- && apk del .build-deps
+ && apt-get purge --auto-remove -y \
+        curl \
+        gcc \
+	build-essential \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
+
 
 COPY mopidy.conf /var/lib/mopidy/.config/mopidy/mopidy.conf
 
