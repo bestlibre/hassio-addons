@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 email=$(jq -r '.email' /data/options.json)
-https_only=$(jq -r 'if .disable_http_chalenge? then "-disable-http-challenge" else "" ' /data/options.json)
+https_only=$(jq -r 'if .disable_http_chalenge? then "-disable-http-challenge" else "" end' /data/options.json)
 mustache-cli /data/options.json /templates/vhost.mustache > /tmp/caddy.conf
 mkdir -p /ssl/caddy
 export CADDYPATH=/ssl/caddy
