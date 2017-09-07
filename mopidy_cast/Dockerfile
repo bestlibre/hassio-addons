@@ -1,17 +1,20 @@
 FROM bestlibre/%%ARCH%%-mopidy
 
 ENV LANG C.UTF-8
-
+ENV SNAPCAST_VERSION 0.11.1
 #Install snapcast-server
-RUN apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/testing \
-        snapcast-server
-
-# Add Tini
-ENV TINI_VERSION v0.14.0
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static-%%ARCH%% /tini
-RUN chmod +x /tini
-
-ENTRYPOINT ["/tini", "--"]
+RUN set -ex \
+    # Official Mopidy install for Debian/Ubuntu along with some extensions
+    # (see https://docs.mopidy.com/en/latest/installation/debian/ )
+ && apt-get update \
+ && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        curl \
+ && curl -L https://github.com/badaix/snapcast/releases/download/v${SNAPCAST_VERSION}/snapserver_${SNAPCAST_VERSION}_%%ARCH%%.deb -o /tmp/snapcastserver.deb \
+ && dpkg -i /tmp/snapcastserver.deb || DEBIAN_FRONTEND=noninteractive apt-get install -f -y\
+ && apt-get purge --auto-remove -y \  
+        curl \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
 
 COPY mopidy_cast.conf /var/lib/mopidy/.config/mopidy/mopidy_cast.conf
 
