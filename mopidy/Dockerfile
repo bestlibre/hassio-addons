@@ -16,6 +16,8 @@ RUN set -ex \
         curl \
         gcc \
 	gstreamer1.0-alsa \
+	gstreamer1.0-fluendo-mp3 \
+	gstreamer1.0-libav \
 	jq \
 	python-crypto \
  && curl -L https://apt.mopidy.com/mopidy.gpg -o /tmp/mopidy.gpg \
@@ -25,7 +27,7 @@ RUN set -ex \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         jq mopidy mopidy-spotify mopidy-local-sqlite \
  && curl -L https://bootstrap.pypa.io/get-pip.py | python - \
- && pip install -U six \
+ && pip install -U six oauth2client\
  && pip install \
 	pyasn1 \
         Mopidy-Moped \
