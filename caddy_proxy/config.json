@@ -1,6 +1,6 @@
 {
     "name": "Caddy Proxy",
-    "version": "0.10.6-1",
+    "version": "0.10.8",
     "slug": "caddy_proxy",
     "description": "Caddy Proxy for multiple VHOSTS with ssl",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/caddy_proxy",
@@ -8,11 +8,7 @@
     "boot": "auto",
     "image": "bestlibre/{arch}-caddy-proxy",
     "options": {
-	"vhosts":[
-	    {"vhost": "homeassistant.domain.tld",
-	     "port": "8123"
-	     }
-	],
+	"homeassistant": "homeassistant.domain.tld",
 	"email": null
     },
     "schema": {
@@ -23,7 +19,8 @@
 	    }
 	],
 	"email": "email",
-	"disable_http_chalenge": "bool"
+	"disable_http_chalenge": "bool",
+	"raw_config": "str"
     },
     "ports": {"80/tcp": 80, "443/tcp": 443},
     "map": ["ssl:rw"]

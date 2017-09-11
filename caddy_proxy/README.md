@@ -5,18 +5,24 @@
 
 This addon provide a [Caddy](https://caddyserver.com/) Proxy with multiple vhost support and automatic ssl (obtention and renewal). It should be a easier option than the nginx_proxy and certbot addons.
 
+The simplier way to use it is just to set your external address in the homeassistant field.
+
 ## Configuration
+### homeassistant (str)
+
+This is a shortcut to set a proxy for homeassistant. If this option is set to "homeassistant.domain.tld" it will set a proxy from https://homeassistant.domain.tld to homeassistant:8123.
+
 ### vhosts (list)
 
 This list describe all the virtual host to be proxified.
 
 #### vhost (string)
 
-Full hostname (ie homeassistant.domain.tld)
+Full hostname (ie myservice.domain.tld)
 
 #### port (string)
 
-Internal port (ie 8123 for homeassistant)
+Internal port (ie 8123 for homeassistant, 3000 for grafana)
 
 #### remote (str)
 
@@ -25,3 +31,7 @@ Ip or url for the proxified server. If not set default to 172.17.0.1 (docker hos
 ### email (email)
 
 Email is the email address to use with which to generate a certificate with Let's Encrypt.
+
+### raw_config (str)
+
+This string will be added to the caddy configuration file, after the domain proxified with the vhosts section.
