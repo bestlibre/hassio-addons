@@ -10,7 +10,7 @@ then
 fi
 
 mustache-cli /data/options.json /templates/vhost.mustache >> /tmp/caddy.conf
-echo $(jq -r '.raw_config?' /data/options.json) >> /tmp/caddy.conf
+echo $(jq -r '.raw_config // empty' /data/options.json) >> /tmp/caddy.conf
 
 mkdir -p /ssl/caddy
 export CADDYPATH=/ssl/caddy
