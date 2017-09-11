@@ -57,7 +57,7 @@ will become
 ````
 
 ## Google Music support
-To get the GMusic addon working add this to your Options:
+To get the GMusic addon working add this to your options section:
 ````
 {
    "name": "gmusic/username",
@@ -68,6 +68,7 @@ To get the GMusic addon working add this to your Options:
 	"value": "ApplicationPassword"
 }
 ````
+
 You can generate your application password as described [here](https://support.google.com/accounts/answer/185833?hl=en).
 
 Other options are available, check [the official doc](https://github.com/mopidy/mopidy-gmusic#configuration) for the complete list
@@ -102,4 +103,31 @@ spotify/search_artist_count: Maximum number of artists returned in search result
 spotify/search_track_count: Maximum number of tracks returned in search results. Number between 0 and 50. Defaults to 50.
 spotify/toplist_countries: Comma separated list of two letter ISO country codes to get toplists for. Defaults to blank, which is interpreted as all countries that Spotify is available in.
 spotify/private_session: Whether to use a private Spotify session. Turn on private session to disable sharing of played tracks with friends through the Spotify activity feed, Last.fm scrobbling, and Facebook. This only affects social sharing done by Spotify, not by other Mopidy extensions. Defaults to false.
+````
+
+## Complete example
+This a working configuration example, with Google Music and local scan.
+
+````
+{
+  "local_scan": true,
+  "options": [
+    {
+      "name": "local/media_dir",
+      "value": "/share/mopidy/media"
+    },
+    {
+      "name": "m3u/playlists_dir",
+      "value": "/share/mopidy/playlists/"
+    },
+    {
+      "name": "gmusic/username",
+      "value": "MYUSER"
+    },
+    {
+      "name": "gmusic/password",
+      "value": "MYPASSWORD"
+    }
+  ]
+}
 ````
