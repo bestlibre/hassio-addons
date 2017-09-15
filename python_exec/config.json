@@ -10,5 +10,6 @@
     "ports": {"8080/tcp": null},
     "options": {"code": null},
     "schema": {"code": "str",
-	       "requirements": ["str"]}
+	       "requirements": ["str"]},
+    "map": ["share"]
 }
