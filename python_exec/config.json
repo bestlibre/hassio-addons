@@ -1,0 +1,14 @@
+{
+    "name": "Python Executor",
+    "version": "0.1.0",
+    "slug": "python_exec",
+    "image": "bestlibre/{arch}-python-exec",
+    "description": "Python executor",
+    "url": "https://github.com/bestlibre/hassio-addons/tree/master/python_exec",
+    "startup": "application",
+    "boot": "auto",
+    "ports": {"8080/tcp": null},
+    "options": {"code": null},
+    "schema": {"code": "str",
+	       "requirements": ["str"]}
+}
