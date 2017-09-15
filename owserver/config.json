@@ -1,0 +1,14 @@
+{
+    "name": "1-wire Server",
+    "version": "0.1.0",
+    "slug": "owserver",
+    "description": "One wire server",
+    "url": "https://github.com/bestlibre/hassio-addons/tree/master/owserver",
+    "startup": "system",
+    "boot": "auto",
+    "image": "bestlibre/{arch}-owserver",
+    "options": {},
+    "schema": {},
+    "devices": ["/dev/i2c-1:/dev/i2c-1"],
+    "ports": {"4304/tcp": null}
+}
