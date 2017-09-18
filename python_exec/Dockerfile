@@ -4,10 +4,12 @@ FROM %%BASE_IMAGE%%
 ENV LANG C.UTF-8
 
 RUN apk add --no-cache \
+    	jq \
         py-pip \
 	python \
 	python-dev\
- && pip install -U pip
+ && pip install -U pip \
+ && pip install -U virtualenv
 
 # Copy data for add-on
 COPY run.sh /
