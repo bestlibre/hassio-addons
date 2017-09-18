@@ -1,4 +1,5 @@
 # Simple python executor
+[![Build Status](https://travis-ci.org/bestlibre/hassio-addons.svg?branch=master)](https://travis-ci.org/bestlibre/hassio-addons)[![](https://images.microbadger.com/badges/version/bestlibre/armhf-python-exec.svg)](https://microbadger.com/images/bestlibre/armhf-python-exec "Get your own version badge on microbadger.com")
 
 This addon is mainly for devlopment purpose. It will install, if needed, the given requirements with pip and then launch the python script.
 

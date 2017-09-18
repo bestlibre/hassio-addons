@@ -29,6 +29,15 @@ snapcast server and client for multi room audio : WIP, not tested
 ## [Syncthing](https://github.com/bestlibre/hassio-addons/tree/master/syncthing) [![](https://images.microbadger.com/badges/version/bestlibre/armhf-syncthing.svg)](https://microbadger.com/images/bestlibre/armhf-syncthing "Get your own version badge on microbadger.com")
 Syncthing synchronization service : working.
 
+## [Owserver](https://github.com/bestlibre/hassio-addons/tree/master/owserver) [![](https://images.microbadger.com/badges/version/bestlibre/armhf-owserver.svg)](https://microbadger.com/images/bestlibre/armhf-owserver "Get your own version badge on microbadger.com")
+
+One wire server : working.
+
+## [Python Executor](https://github.com/bestlibre/hassio-addons/tree/master/python_exec) [![](https://images.microbadger.com/badges/version/bestlibre/armhf-python-exec.svg)](https://microbadger.com/images/bestlibre/armhf-python-exec "Get your own version badge on microbadger.com")
+
+Python executor : working.
+
+
 ## [Grafana for armhf](https://github.com/bestlibre/hassio-addons/tree/master/armhf-grafana-debian)
 Grafana server for armhf arch, debian based image : **deprecated**.
 
