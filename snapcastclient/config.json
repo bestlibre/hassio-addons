@@ -1,12 +1,12 @@
 {
   "name": "snapcast-client",
-  "version": "beta-1",
+  "version": "0.1.0",
   "slug": "snapcastclient",
   "description": "Snapcast client for multiroom audio diffusion",
   "startup": "system",
   "boot": "auto",
   "image": "bestlibre/{arch}-snapcast-client",
   "options": {},
-  "schema": {},
+  "schema": {"host": "str"},
   "ports": {}
 }
