@@ -15,3 +15,6 @@ List of requirements to install with pip
 
 ### code (string)
 Path to the python source file.
+
+### python2 (bool)
+Use python2 instead of python3

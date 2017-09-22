@@ -7,8 +7,11 @@ RUN apk add --no-cache \
     	jq \
         py-pip \
 	python \
-	python-dev\
+	python-dev \
+	python3 \
+	python3-dev\
  && pip install -U pip \
+ && pip3 install -U pip \
  && pip install -U virtualenv
 
 # Copy data for add-on
