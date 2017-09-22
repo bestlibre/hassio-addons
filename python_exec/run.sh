@@ -5,11 +5,14 @@ requirements=$(cat /data/options.json | jq -r 'if .requirements then .requiremen
 code=$(cat /data/options.json | jq -r '.code')
 clean=$(cat /data/options.json | jq -r '.clean //empty')
 py2=$(cat /data/options.json | jq -r '.python2 // empty')
+
 PYTHON=$(which python3)
+
 if [ "${py2}" == "true" ];
 then
     PYTHON=$(which python2)
 fi
+
 if [ -n "$requirements" ];
 then
     if [ "$clean" == "true" ];
@@ -26,5 +29,4 @@ then
     pip install -U ${requirements}
 fi
 python ${code}
-
 
