@@ -1,6 +1,6 @@
 {
     "name": "Grafana Multiarch",
-    "version": "4.4.3-1",
+    "version": "4.4.3-2",
     "slug": "grafana_multiarch",
     "image": "bestlibre/{arch}-grafana",
     "description": "Grafana addon. Image based on upstream docker images. The version used is the greater common version between the official amd64 image and the f2git one for armhf",
