@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
-jq --raw-output '.env_var | .[] | .name + " " + .value' /data/options.json | while read name val;do export $name="$val";done
+eval $(jq --raw-output '.env_var | .[] | "export " + .name + "=\"" + .value + "\""' /data/options.json)
 
 influxd

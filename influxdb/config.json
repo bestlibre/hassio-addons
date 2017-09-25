@@ -1,6 +1,6 @@
 {
     "name": "InfluxDb",
-    "version": "0.1.3",
+    "version": "0.1.3-1",
     "slug": "influxdb",
     "description": "InfluxDb server",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/influxdb",
