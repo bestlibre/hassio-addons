@@ -5,6 +5,7 @@
     "description": "InfluxDb server",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/influxdb",
     "startup": "system",
+    "map": ["ssl"],
     "boot": "auto",
     "image": "bestlibre/{arch}-influxdb",
     "options": {"env_var": []},
