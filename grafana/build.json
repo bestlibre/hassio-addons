@@ -1,0 +1,6 @@
+{
+    "build_from": {
+	"amd64" : "grafana/grafana:4.4.3",
+	"armhf" : "fg2it/grafana-armhf:v4.4.3"
+    }
+}
