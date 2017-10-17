@@ -1,15 +1,16 @@
 {
     "name": "Mopidy",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "slug": "mopidy",
     "description": "mopidy music server",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/mopidy",
     "startup": "application",
     "boot": "auto",
     "image": "bestlibre/{arch}-mopidy",
-    "options": {"local_scan": true},
+    "options": {"local_scan": true,
+	        "options": []},
     "schema": {
-	"local_scan": "bool",
+	"local_scan": "bool?",
 	"options": [{"name": "str", "value": "str"}]
     },
     "devices": ["/dev/snd:/dev/snd:rwm"],

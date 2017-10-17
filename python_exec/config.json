@@ -1,6 +1,6 @@
 {
     "name": "Python Executor",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "slug": "python_exec",
     "image": "bestlibre/{arch}-python-exec",
     "description": "Python executor",
@@ -8,9 +8,10 @@
     "startup": "application",
     "boot": "auto",
     "ports": {"8080/tcp": null},
-    "options": {"code": null},
+    "options": {"code": null,
+	        "requirements": []},
     "schema": {"code": "str",
 	       "requirements": ["str"],
-	       "clean": "bool"},
+	       "clean": "bool?"},
     "map": ["share"]
 }

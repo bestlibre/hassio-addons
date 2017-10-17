@@ -1,5 +1,5 @@
-#amd64:FROM grafana/grafana:%%UPSTREAM_VERSION%%
-#armhf:FROM fg2it/grafana-armhf:v%%UPSTREAM_VERSION%%
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \

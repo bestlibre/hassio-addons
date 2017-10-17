@@ -1,6 +1,6 @@
 {
     "name": "Certbot",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "slug": "certbot",
     "description": "Certbot compagnion for Nginx Proxy",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/certbot",
@@ -15,11 +15,11 @@
 	"ssl_only": false
     },
     "schema": {
-        "debug": "bool",
+        "debug": "bool?",
         "email": "email",
         "certificats": [{"name": "str",
                          "domains": "str"}],
-	"ssl_only": "bool"
+	"ssl_only": "bool?"
     },
     "map": ["ssl:rw"],
     "ports": {"443/tcp": 10443}

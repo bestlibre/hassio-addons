@@ -1,6 +1,6 @@
 {
     "name": "Nginx Proxy",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "slug": "nginx_proxy",
     "description": "Nginx Proxy for multiple VHOSTS",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/nginx_proxy",
@@ -17,11 +17,11 @@
     "schema": {
 	"vhosts": [
 	    {"vhost": "str",
-	     "remote": "str",
+	     "remote": "str?",
 	     "port": "str",
-	     "default_server": "bool",
-	     "certname": "str",
-	     "ssl_modern": "bool"
+	     "default_server": "bool?",
+	     "certname": "str?",
+	     "ssl_modern": "bool?"
 	    }
 	]
     },
