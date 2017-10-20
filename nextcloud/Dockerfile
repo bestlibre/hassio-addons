@@ -1,4 +1,5 @@
-FROM nextcloud:12.0.3-fpm
+ARG BUILD_FROM
+FROM $BUILD_FROM
 ARG BUILD_ARCH
 
 COPY qemu-arm-static /usr/bin/qemu-arm-static
