@@ -1,6 +1,6 @@
 {
     "name": "Syncthing",
-    "version": "0.14.39",
+    "version": "0.14.39-1",
     "slug": "syncthing",
     "description": "syncthing synchronization service",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/syncthing",
@@ -10,6 +10,6 @@
     "options": {},
     "schema": {},
     "ports": {"8384/tcp": 8384},
-    "map": ["share:rw"],
+    "map": ["share:rw", "config:rw", "backup:rw", "addons:rw"],
     "webui": "http://[HOST]:[PORT:8384]"
 }
