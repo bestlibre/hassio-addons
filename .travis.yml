@@ -4,6 +4,7 @@ services:
 before_install:
   - sudo apt-get install jq
 env:
+  - ADDON="nextcloud"
   - ADDON="python_exec"
   - ADDON="mopidy mopidy_cast"
   - ADDON="influxdb"
