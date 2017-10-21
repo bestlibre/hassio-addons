@@ -10,14 +10,16 @@ RUN if [ "$BUILD_ARCH" = "armhf" ]; then rm /usr/bin/qemu-aarch64-static;\
     else\
     rm /usr/bin/qemu-aarch64-static;\
     rm /usr/bin/qemu-arm-static;\
-    fi
-
-RUN apt-get update \
+    fi \
+ && apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     		jq \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
 
+RUN sed -i "s|/var/www/html|/data/html|g" /etc/apache2/sites-enabled/000-default.conf \
+ && sed -i "s|/var/www/html|/data/html|g" /entrypoint.sh \
+ && sed -i "s|/var/www/html|/data/html|g" /usr/src/nextcloud/config/autoconfig.php
 
 COPY run_addon.sh /
 RUN chmod a+x /run_addon.sh

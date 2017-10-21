@@ -8,8 +8,8 @@
     "startup": "system",
     "boot": "auto",
     "ports": {"80/tcp": null},
-    "environment": {"NEXTCLOUD_DATA_DIR":"/data"},
+    "environment": {},
     "map": ["share:rw"],
-    "options": {"env_var": []},
+    "options": {"env_var": [{"name": "NEXTCLOUD_DATA_DIR", "value": "/share/nextcloud/"}]},
     "schema": {"env_var":[{"name": "str", "value": "str"}]}
 }
