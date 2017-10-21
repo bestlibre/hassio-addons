@@ -1,6 +1,6 @@
 {
     "name": "InfluxDb",
-    "version": "0.1.4",
+    "version": "1.3.6",
     "slug": "influxdb",
     "description": "InfluxDb server",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/influxdb",
@@ -10,5 +10,6 @@
     "image": "bestlibre/{arch}-influxdb",
     "options": {"env_var": []},
     "schema": {"env_var":[{"name": "str", "value": "str"}]},
-    "ports": {"8086/tcp": 8086}
+    "ports": {"8086/tcp": 8086},
+    "arch": ["armhf", "amd64", "aarch64"]
 }
