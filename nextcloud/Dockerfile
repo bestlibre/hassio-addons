@@ -17,9 +17,10 @@ RUN apt-get update \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
 
-RUN sed -i "s|/var/www/html|/data/html|g" /etc/apache2/sites-enabled/000-default.conf \
- && sed -i "s|/var/www/html|/data/html|g" /entrypoint.sh \
- && sed -i "s|/var/www/html|/data/html|g" /usr/src/nextcloud/config/autoconfig.php
+RUN sed -i "s|/var/www|/data/www|g" /etc/apache2/sites-enabled/000-default.conf \
+ && sed -i "s|/var/www|/data/www|g" /etc/apache2/apache.conf \
+ && sed -i "s|/var/www/html|/data/www/html|g" /entrypoint.sh \
+ && sed -i "s|/var/www/html|/data/www/html|g" /usr/src/nextcloud/config/autoconfig.php
 
 COPY run_addon.sh /
 RUN chmod a+x /run_addon.sh
