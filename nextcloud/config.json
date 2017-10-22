@@ -1,5 +1,5 @@
 {
-    "name": "nextcloud",
+    "name": "Nextcloud",
     "version": "12.0.3",
     "slug": "nextcloud",
     "image": "bestlibre/{arch}-nextcloud",
