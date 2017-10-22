@@ -18,7 +18,7 @@ RUN apt-get update \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ~/.cache
 
 RUN sed -i "s|/var/www|/data/www|g" /etc/apache2/sites-enabled/000-default.conf \
- && sed -i "s|/var/www|/data/www|g" /etc/apache2/apache.conf \
+ && sed -i "s|/var/www|/data/www|g" /etc/apache2/apache2.conf \
  && sed -i "s|/var/www/html|/data/www/html|g" /entrypoint.sh \
  && sed -i "s|/var/www/html|/data/www/html|g" /usr/src/nextcloud/config/autoconfig.php
 
