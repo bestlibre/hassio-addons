@@ -1,30 +1,30 @@
 {
-    "name": "Nginx Proxy",
-    "version": "0.1.7",
-    "slug": "nginx_proxy",
-    "description": "Nginx Proxy for multiple VHOSTS",
-    "url": "https://github.com/bestlibre/hassio-addons/tree/master/nginx_proxy",
-    "startup": "system",
-    "boot": "auto",
-    "image": "bestlibre/{arch}-nginx-proxy",
-    "options": {
-	"vhosts":[
-	    {"vhost": "homeassistant.domain.tld",
-	     "port": "8123",
-	     "default_server": true}
-	]
-    },
-    "schema": {
-	"vhosts": [
-	    {"vhost": "str",
-	     "remote": "str?",
-	     "port": "str",
-	     "default_server": "bool?",
-	     "certname": "str?",
-	     "ssl_modern": "bool?"
-	    }
-	]
-    },
-    "ports": {"80/tcp": 80, "443/tcp": 443},
-    "map": ["ssl"]
+  "name": "Nginx Proxy",
+  "version": "0.1.7",
+  "slug": "nginx_proxy",
+  "description": "Nginx Proxy for multiple VHOSTS",
+  "url": "https://github.com/bestlibre/hassio-addons/tree/master/nginx_proxy",
+  "startup": "system",
+  "boot": "auto",
+  "image": "bestlibre/{arch}-nginx-proxy",
+  "options": {
+    "vhosts":[
+      {"vhost": "homeassistant.domain.tld",
+       "port": "8123",
+       "default_server": true}
+    ]
+  },
+  "schema": {
+    "vhosts": [
+      {"vhost": "str",
+       "remote": "str?",
+       "port": "str",
+       "default_server": "bool?",
+       "certname": "str?",
+       "ssl_modern": "bool?",
+       "auth": "str?"}
+    ]
+  },
+  "ports": {"80/tcp": 80, "443/tcp": 443},
+  "map": ["ssl"]
 }

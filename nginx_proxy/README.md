@@ -26,6 +26,14 @@ Configure this vhost to be the default is set to true. Must only be used once.
 
 Ip or url for the proxified server. If not set default to 172.17.0.1 (docker host).
 
+#### auth (str)
+
+Enables HTTP basic auth for a single user on a vhost. The string is dumped
+directly to a file and used as the auth_basic_user_file. See the documentation
+for
+[auth_basic_user_file](http://nginx.org/en/docs/http/ngx_http_auth_basic_module.html#auth_basic_user_file)
+on how to format the value.
+
 #### certname (str)
 If not set, only http is proxified. If set, the template used for the vhosts force https. 
 
