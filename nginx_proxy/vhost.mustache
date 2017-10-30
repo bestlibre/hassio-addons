@@ -3,14 +3,16 @@ server {
     server_name {{vhost}};
     listen 80 {{#default_server}}default_server{{/default_server}};
     listen [::]:80 {{#default_server}}default_server{{/default_server}};
+
     location ~ /.well-known {
         allow all;
-	root /ssl/wk/;
+        auth_basic off;
+        root /ssl/wk/;
     }
 {{#certname}}
 
     location / {
-	return 301 https://$host$request_uri;
+        return 301 https://$host$request_uri;
     }
 }
 
@@ -54,9 +56,15 @@ server {
 
     location ~ /.well-known {
         allow all;
-	root /ssl/wk/;
+        root /ssl/wk/;
     }
 {{/certname}}
+
+    {{#auth}}
+    auth_basic "password protected";
+    auth_basic_user_file /data/auth_{{vhost}};
+    {{/auth}}
+
     location / {
         proxy_pass http://{{#remote}}{{remote}}{{/remote}}{{^remote}}172.17.0.1{{/remote}}:{{port}};
     }
