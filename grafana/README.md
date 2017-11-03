@@ -14,7 +14,7 @@ For exemple, to change the instance name:
   "env_var": [
     {
       "name": "GF_DEFAULT_INSTANCE_NAME",
-      "value": "homecoffee"
+      "value": "my-instance"
     }
   ]
 }
