@@ -23,5 +23,5 @@ This variable can be used to set environment variable before launching influxdb,
 
 For exemple, to enable authentication :
 ``` python
-{"env_var": [{"name": "INFLUXDB_HTTP_AUTH_ENABLED", "value": "true"}]
+{"env_var": [{"name": "INFLUXDB_HTTP_AUTH_ENABLED", "value": "true"}]}
 ```
