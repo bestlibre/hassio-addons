@@ -7,3 +7,15 @@ I have tried to build a grafana addon based on alpine, but failed for lack of ph
 ## env_var (dict)
 
 This variable can be used to set environment variables before launching grafana, and thus setting configuration variable. The list of variables is [here](http://docs.grafana.org/installation/configuration/). 
+
+For exemple, to change the instance name:
+``` python
+{
+  "env_var": [
+    {
+      "name": "GF_DEFAULT_INSTANCE_NAME",
+      "value": "my-instance"
+    }
+  ]
+}
+```
