@@ -11,6 +11,7 @@ RUN if [ "$BUILD_ARCH" = "armhf" ]; then rm /usr/bin/qemu-aarch64-static;\
     rm /usr/bin/qemu-aarch64-static;\
     rm /usr/bin/qemu-arm-static;\
     fi
+
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     		jq \
