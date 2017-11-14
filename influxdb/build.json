@@ -1,7 +1,7 @@
 {
     "build_from": {
-	"armhf" : "arm32v7/influxdb:1.3.6",
-	"aarch64": "arm64v8/influxdb:1.3.6",
-	"amd64" : "amd64/influxdb:1.3.6"
+	"armhf" : "arm32v7/influxdb:1.3.7",
+	"aarch64": "arm64v8/influxdb:1.3.7",
+	"amd64" : "amd64/influxdb:1.3.7"
     }
 }
