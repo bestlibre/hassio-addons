@@ -25,6 +25,8 @@ then
        cd /data/venv
        virtualenv -p ${PYTHON} .
        . bin/activate
+    else
+       . /data/venv/bin/activate
     fi
     pip install -U ${requirements}
 fi
