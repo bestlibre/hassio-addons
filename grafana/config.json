@@ -12,6 +12,6 @@
     "environment": {"GF_PATHS_DATA":"/data", "GF_PATHS_PLUGINS":"/data/plugins"},
     "arch": ["armhf", "amd64"],
     "options": {"env_var": [], "plugins": []},
-    "schema": {"env_var":[{"name": "str", "value": "str"}]},
+    "schema": {"env_var":[{"name": "str", "value": "str"}], "plugins": ["str"]},
     "webui": "http://[HOST]:[PORT:3000]"
 }
