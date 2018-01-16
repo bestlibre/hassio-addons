@@ -11,7 +11,7 @@
     "ports": {"3000/tcp": 3000},
     "environment": {"GF_PATHS_DATA":"/data", "GF_PATHS_PLUGINS":"/data/plugins"},
     "arch": ["armhf", "amd64"],
-    "options": {"env_var": [], "plugins": []},
-    "schema": {"env_var":[{"name": "str", "value": "str"}], "plugins": ["str"]},
+    "options": {"env_var": []},
+    "schema": {"env_var":[{"name": "str", "value": "str"}]},
     "webui": "http://[HOST]:[PORT:3000]"
 }
