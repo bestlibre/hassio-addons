@@ -20,6 +20,14 @@ For exemple, to change the instance name:
 }
 ```
 
-## plugins (list)
-
-This variable can be used to install plugins. Just list the names of the plugins, they will be installed with `grafana-cli plugins install PLUGIN_NAME`
+To install plugins, you can use the `GF_INSTALL_PLUGINS` variable
+``` python
+{
+  "env_var": [
+    {
+      "name": "GF_INSTALL_PLUGINS",
+      "value": "plugin1,plugin2"
+    }
+  ]
+}
+```
