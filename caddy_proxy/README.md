@@ -28,6 +28,15 @@ Internal port (ie 8123 for homeassistant, 3000 for grafana)
 
 Ip or url for the proxified server. If not set default to 172.17.0.1 (docker host).
 
+#### user (str)
+
+Username to be used with basicauth. `pwd` (see below) must also be set.
+
+#### pwd (str)
+
+Password to be used with basicauth. `user` (see above) must also be set.
+
+
 ### email (email)
 
 Email is the email address to use with which to generate a certificate with Let's Encrypt.
