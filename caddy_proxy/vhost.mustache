@@ -1,9 +1,14 @@
 {{#vhosts}}
 {{vhost}} {
+{{#directory}}
+    root {{directory}}
+{{/directory}}
+{{^directory}}
     proxy / {{#remote}}{{remote}}{{/remote}}{{^remote}}172.17.0.1{{/remote}}:{{port}} {
       transparent
       websocket
     }
+{{/directory}}
     log stdout
     errors stdout
 }

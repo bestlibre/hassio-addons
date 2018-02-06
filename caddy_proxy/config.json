@@ -1,6 +1,6 @@
 {
     "name": "Caddy Proxy",
-    "version": "0.10.10",
+    "version": "0.10.10-1",
     "slug": "caddy_proxy",
     "description": "Caddy Proxy for multiple VHOSTS with ssl",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/caddy_proxy",
@@ -26,5 +26,5 @@
 	"homeassistant": "str?"
     },
     "ports": {"80/tcp": 80, "443/tcp": 443},
-    "map": ["ssl:rw"]
+    "map": ["ssl:rw", "share:rw"]
 }
