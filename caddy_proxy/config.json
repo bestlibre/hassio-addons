@@ -16,12 +16,13 @@
 	"vhosts": [
 	    {"vhost": "str",
 	     "remote": "str?",
-	     "port": "str"
+	     "port": "str",
+	     "directory": "str?"
 	    }
 	],
 	"email": "email",
 	"disable_http_chalenge": "bool?",
-	"raw_config": "str?",
+	"raw_config": [{"line": "str"}],
 	"homeassistant": "str?"
     },
     "ports": {"80/tcp": 80, "443/tcp": 443},
