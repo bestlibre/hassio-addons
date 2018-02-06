@@ -1,0 +1,14 @@
+{
+    "name": "BicBucStriim",
+    "version": "1.4.1",
+    "slug": "bicbucstriim",
+    "description": "BicBucStriim",
+    "url": "https://github.com/bestlibre/hassio-addons/tree/master/bicbucstriim",
+    "startup": "after",
+    "boot": "auto",
+    "image": "bestlibre/{arch}-bicbucstriim",
+    "options": {},
+    "schema": {},
+    "ports": {"80/tcp": null},
+    "map": ["share:rw"]
+}
