@@ -18,5 +18,6 @@
     "map": ["share"],
     "arch": ["amd64", "armhf"],
     "tmpfs": "size=10m,rw",
-    "webui": "http://[HOST]:[PORT:6681]"
+    "webui": "http://[HOST]:[PORT:6681]",
+    "host_ipc": true
 }
