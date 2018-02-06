@@ -9,9 +9,11 @@
       websocket
     }
 {{/directory}}
-{{#user_pwd}}
-  basicauth / {{user}} {{pwd}}
-{{/user_pwd}}
+{{#user}}
+  {{#pwd}}
+    basicauth / {{user}} {{pwd}}
+  {{/pwd}}
+{{/user}}
     log stdout
     errors stdout
 }
