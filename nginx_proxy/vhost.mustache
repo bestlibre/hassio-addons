@@ -64,7 +64,9 @@ server {
     auth_basic "password protected";
     auth_basic_user_file /data/auth_{{vhost}};
     {{/auth}}
-
+    {{#max_body_size}}
+    client_max_body_size {{max_body_size}};
+    {{/max_body_size}}
     location / {
         proxy_pass http://{{#remote}}{{remote}}{{/remote}}{{^remote}}172.17.0.1{{/remote}}:{{port}};
     }
