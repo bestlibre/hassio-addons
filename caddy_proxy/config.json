@@ -19,7 +19,8 @@
 	     "remote": "str?",
 	     "port": "str",
 	     "directory": "str?",
-	     "user_pwd": [{"user": "str", "pwd": "str"}]
+	     "user": "str?",
+	     "pwd": "str?"
 	    }
 	],
 	"email": "email",

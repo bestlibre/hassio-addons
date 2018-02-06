@@ -32,6 +32,7 @@ Ip or url for the proxified server. If not set default to 172.17.0.1 (docker hos
 
 Email is the email address to use with which to generate a certificate with Let's Encrypt.
 
-### raw_config (str)
+### raw_config (list)
 
-This string will be added to the caddy configuration file, after the domain proxified with the vhosts section.
+#### line (str)
+Each line will be added to the caddy configuration file, after the domain proxified with the vhosts section.
