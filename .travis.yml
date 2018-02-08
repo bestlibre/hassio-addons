@@ -15,6 +15,7 @@ env:
   - ADDON="syncthing"
   - ADDON="caddy_proxy"
   - ADDON="grafana"
+  - ADDON="calibreweb"
 script:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - ./build.sh $ADDON 
