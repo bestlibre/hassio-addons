@@ -16,8 +16,12 @@ RUN set -ex \
 	gstreamer1.0-alsa \
 	gstreamer1.0-fluendo-mp3 \
 	gstreamer1.0-libav \
+	libxml2-dev \
+	libxslt-dev \
+	libz-dev \
 	jq \
 	python-crypto \
+	python-dev \
  && curl -L https://apt.mopidy.com/mopidy.gpg -o /tmp/mopidy.gpg \
  && curl -L https://apt.mopidy.com/mopidy.list -o /etc/apt/sources.list.d/mopidy.list \
  && apt-key add /tmp/mopidy.gpg \
