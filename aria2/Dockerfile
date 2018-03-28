@@ -10,7 +10,7 @@ ENV LANG C.UTF-8
 # Setup base
 RUN apk add --no-cache -U --virtual .build-deps \
         git \
- && apk add --no-cache -U aria2 darkhttpd \
+ && apk add --no-cache -U aria2 darkhttpd jq \
  && git clone https://github.com/ziahamza/webui-aria2.git /webui-aria2 \
  && rm -rf /webui-aria2/.git \
  && rm -rf /webui-aria2/screenshots \
