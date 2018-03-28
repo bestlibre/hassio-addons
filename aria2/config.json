@@ -7,8 +7,8 @@
     "startup": "system",
     "boot": "auto",
     "image": "bestlibre/{arch}-aria2",
-    "options": {},
-    "schema": {},
+    "options": {"options":[]},
+    "schema": {"downloads": "str?", "secret": "str?", "options":[{"name": "str", "value": "str"}]},
     "ports": {"6800/tcp": null, "8080/tcp": null},
     "map": ["share:rw"],
     "webui": "http://[HOST]:[PORT:8080]"
