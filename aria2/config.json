@@ -1,0 +1,15 @@
+{
+    "name": "Aria2",
+    "version": "0.1",
+    "slug": "aria2",
+    "description": "Aria2 download manager",
+    "url": "https://github.com/bestlibre/hassio-addons/tree/master/aria2",
+    "startup": "system",
+    "boot": "auto",
+    "image": "bestlibre/{arch}-aria2",
+    "options": {},
+    "schema": {},
+    "ports": {"6800/tcp": null, "8080/tcp": null},
+    "map": ["share:rw"],
+    "webui": "http://[HOST]:[PORT:8080]"
+}
