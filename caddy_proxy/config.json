@@ -11,7 +11,7 @@
 	"homeassistant": "homeassistant.domain.tld",
 	"vhosts": [],
 	"raw_config": [],
-	"email": null
+	"email": "email@example.org"
     },
     "schema": {
 	"vhosts": [
