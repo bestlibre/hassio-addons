@@ -10,12 +10,12 @@ server {
         root /ssl/wk/;
     }
 {{#certname}}
-{{^ssl_only}}
+{{^keep_http_enabled}}
 
     location / {
         return 301 https://$host$request_uri;
     }
-{{/ssl_only}}
+{{/keep_http_enabled}}
 }
 
 server {
