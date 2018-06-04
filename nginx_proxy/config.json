@@ -24,7 +24,7 @@
        "ssl_modern": "bool?",
        "auth": "str?",
        "max_body_size": "str?",
-       "ssl_only": "bool?"
+       "keep_http_enabled": "bool?"
       }
     ]
   },
