@@ -35,13 +35,16 @@ for
 on how to format the value.
 
 #### certname (str)
-If not set, only http is proxified. If set, the template used for the vhosts force https. 
+If not set, only http is proxified. If set and `keep_http_enabled` is not set to `true`, https is forced. 
 
 The key and certchain must be located in
 `/ssl/letsencrypt/live/${certname}/privkey.pem` and `/ssl/letsencrypt/live/${certname}/fullchain.pem`. A solution to obtain them is to used the [certbot addon](https://github.com/bestlibre/hassio-addons/tree/master/certbot).
 
 #### ssl_modern (bool)
 If certname is set, you can set this parameter to switch betwwen ssl profils. The profile are the ones defined by the [mozilla ssl config generator](https://mozilla.github.io/server-side-tls/ssl-config-generator/). Use the [modern one](https://wiki.mozilla.org/Security/Server_Side_TLS#Modern_compatibility) is set to `true`, the [intermediate one](https://wiki.mozilla.org/Security/Server_Side_TLS#Intermediate_compatibility_.28default.29) is set to `false`or not set.
+
+#### keep_http_enabled (bool)
+If certname is set, this option allows you to keep accepting http connections by setting this to `true`. Leaving the option out or setting it to `false` will redirect HTTP requests to the HTTPS equivalent.
 
 ## Usage exemple
 I proxyfy 4 services, 3 local to the pi, one on another host. My configs, for 4 subdomains, with two different certs (one for each physical hosts) are :
