@@ -9,7 +9,7 @@
     "image": "bestlibre/{arch}-syncthing",
     "options": {},
     "schema": {},
-    "ports": {"8384/tcp": 8384},
+    "ports": {"8384/tcp": 8384, "22000/tcp": null},
     "map": ["share:rw", "config:rw", "backup:rw", "addons:rw"],
     "webui": "http://[HOST]:[PORT:8384]"
 }
