@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 ARG BUILD_ARCH
 
 ENV LANG C.UTF-8
-ENV SNAPCAST_VERSION 0.11.1
+ENV SNAPCAST_VERSION 0.14.0
 #Install snapcast-server
 RUN set -ex \
     # Official Mopidy install for Debian/Ubuntu along with some extensions
