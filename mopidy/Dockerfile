@@ -34,6 +34,7 @@ RUN set -ex \
 	pyasn1 \
         Mopidy-Moped \
         Mopidy-GMusic \
+	Mopidy-Iris \
  && apt-get purge --auto-remove -y \
         curl \
         gcc \

@@ -11,6 +11,7 @@ Mopidy is built with those extensions :
 - Mopidy-GMusic
 - Mopidy-Local-SQLite
 - Mopidy-Spotify
+- Mopidy-Iris
 
 The local media can be stored on /share (which allow an access through the samba addon). By default the directory for media is /share/mopidy/media. Since /share is read-only, the directory must be created from another addon or directly on the host.
 
