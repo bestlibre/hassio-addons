@@ -1,6 +1,6 @@
 {
   "name": "Nginx Proxy",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "slug": "nginx_proxy",
   "description": "Nginx Proxy for multiple VHOSTS",
   "url": "https://github.com/bestlibre/hassio-addons/tree/master/nginx_proxy",
@@ -23,7 +23,8 @@
        "certname": "str?",
        "ssl_modern": "bool?",
        "auth": "str?",
-       "max_body_size": "str?"
+       "max_body_size": "str?",
+       "keep_http_enabled": "bool?"
       }
     ]
   },
