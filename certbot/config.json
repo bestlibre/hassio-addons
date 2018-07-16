@@ -10,14 +10,14 @@
     "options": {
         "debug": false,
         "email": "email@domain.tld",
-        "certificats":[{"name": "hass",
+        "certificates":[{"name": "hass",
                         "domains": "homeassistant.domain.tld" }],
 	"ssl_only": false
     },
     "schema": {
         "debug": "bool?",
         "email": "email",
-        "certificats": [{"name": "str",
+        "certificates": [{"name": "str",
                          "domains": "str"}],
 	"ssl_only": "bool?"
     },
