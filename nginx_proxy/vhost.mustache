@@ -69,6 +69,7 @@ server {
     {{/max_body_size}}
     location / {
         proxy_pass http://{{#remote}}{{remote}}{{/remote}}{{^remote}}172.17.0.1{{/remote}}:{{port}};
+        {{#x-ha-access}}proxy_set_header x-ha-access "{{x-ha-access}}";{{/x-ha-access}}
     }
 }
 {{/vhosts}}
