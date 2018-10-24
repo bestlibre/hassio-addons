@@ -1,6 +1,6 @@
 {
     "name": "InfluxDb",
-    "version": "1.5.4",
+    "version": "1.5.5",
     "slug": "influxdb",
     "description": "InfluxDb server",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/influxdb",
@@ -8,8 +8,13 @@
     "map": ["ssl"],
     "boot": "auto",
     "image": "bestlibre/{arch}-influxdb",
-    "options": {"env_var": []},
+    "options": {
+        "env_var": [{
+            "name": "INFLUXDB_BIND_ADDRESS",
+            "value": ":8088"
+        }]
+    },
     "schema": {"env_var":[{"name": "str", "value": "str"}]},
-    "ports": {"8086/tcp": 8086},
+    "ports": {"8086/tcp": 8086, "8088/tcp": 8088},
     "arch": ["armhf", "amd64", "aarch64"]
 }
