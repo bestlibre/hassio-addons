@@ -9,7 +9,7 @@ ENV LANG C.UTF-8
 RUN set -ex \
     # Official Mopidy install for Debian/Ubuntu along with some extensions
     # (see https://docs.mopidy.com/en/latest/installation/debian/ )
- && SNAPCAST_VERSION=v${BUILD_VERSION%-*} \
+ && SNAPCAST_VERSION=${BUILD_VERSION%-*} \
  && apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         curl jq \
