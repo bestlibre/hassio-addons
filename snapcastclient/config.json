@@ -1,6 +1,6 @@
 {
   "name": "snapcast-client",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "slug": "snapcastclient",
   "description": "Snapcast client for multiroom audio diffusion",
   "startup": "application",
