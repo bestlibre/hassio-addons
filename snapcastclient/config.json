@@ -5,6 +5,7 @@
   "description": "Snapcast client for multiroom audio diffusion",
   "startup": "application",
   "boot": "auto",
+  "arch": ["armhf", "amd64"],
   "image": "bestlibre/{arch}-snapcast-client",
   "options": {},
   "schema": {"host": "str"},
