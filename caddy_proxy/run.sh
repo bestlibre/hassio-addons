@@ -11,10 +11,10 @@ fi
 
 if [ -n "$homeassistant" ];
 then
-    echo "{\"vhosts\":[{\"vhost\":\"$homeassistant\", \"port\":\"8123\"}]}" | mustache-cli /templates/vhost.mustache >> /tmp/caddy.conf
+    echo "{\"vhosts\":[{\"vhost\":\"$homeassistant\", \"port\":\"8123\"}]}" | python3 /mustache.py /templates/vhost.mustache - >> /tmp/caddy.conf
 fi
 
-mustache-cli /data/options.json /templates/vhost.mustache >> /tmp/caddy.conf
+python3 /mustache.py /templates/vhost.mustache /data/options.json >> /tmp/caddy.conf
 
 mkdir -p /ssl/caddy
 export CADDYPATH=/ssl/caddy

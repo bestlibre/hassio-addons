@@ -6,21 +6,17 @@ ARG BUILD_ARCH
 # Add env
 ENV LANG C.UTF-8
 
-ENV GOPATH /opt/go
-
 # Setup base
 
 RUN apk add --no-cache -U --virtual .build-deps \
-	build-base \
 	curl \
-	git \
-	go \
 	tar \
  && apk add -U --no-cache \
         jq \
- && go get -u github.com/quantumew/mustache-cli \
- && cp $GOPATH/bin/* /usr/local/bin/ \
- && rm -rf $GOPATH \
+	python3 \
+	python3-dev \
+ && pip3 install -U pip \
+ && pip install pystache \
  && CADDY_VERSION=v${BUILD_VERSION%-*} \
  && if [ ${BUILD_ARCH} == "armhf" ]; then caddyarch=arm7;\
     elif [ ${BUILD_ARCH} == "amd64" ]; then caddyarch=amd64;\
@@ -37,8 +33,10 @@ RUN apk add --no-cache -U --virtual .build-deps \
 
 # Copy data
 COPY run.sh /
+COPY mustache.py /
 COPY vhost.mustache /templates/
 
 RUN chmod a+x /run.sh
+RUN chmod a+x /mustache.py
 
 CMD [ "/run.sh" ]
