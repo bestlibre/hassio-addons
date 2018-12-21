@@ -11,7 +11,7 @@ def render(template, data):
     else:
         with open(data, 'r') as f:
             context = json.load(f)
-    renderer = pystache.Renderer()
+    renderer = pystache.Renderer(escape=lambda u: u)
     print(renderer.render_path(template, context))
 
 

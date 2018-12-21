@@ -12,9 +12,9 @@ The simplier way to use it is just to set your external address in the homeassis
 
 This is a shortcut to set a proxy for homeassistant. If this option is set to "homeassistant.domain.tld" it will set a proxy from https://homeassistant.domain.tld to homeassistant:8123.
 
-### vhosts (list)
+### vhosts (list of dict)
 
-This list describe all the virtual host to be proxified.
+This list describe all the virtual host to be proxified. It must be set to have a valid configuration but can be empty.
 
 #### vhost (string)
 
@@ -36,10 +36,21 @@ Username to be used with basicauth. `pwd` (see below) must also be set.
 
 Password to be used with basicauth. `user` (see above) must also be set.
 
+#### paths (list)
+
+This list describe all the subpath to be proxified, other that the root `/`. It must be set (if the `vhosts`list is not empty) to have a valid configuration but can be empty.
+
+- **path** (str): path to be proxify (ie `/api/`).
+- **port** (str): Internal port.
+- **remote** (str): Ip or url for the proxified server. If not set default to 172.17.0.1 (docker host).
 
 ### email (email)
 
 Email is the email address to use with which to generate a certificate with Let's Encrypt.
+
+### staging (bool)
+
+Activate staging  environment for letsencrypt. False by default.
 
 ### raw_config (list)
 

@@ -4,6 +4,12 @@
     root {{directory}}
 {{/directory}}
 {{^directory}}
+{{#paths}}
+    proxy {{path}} {{#remote}}{{remote}}{{/remote}}{{^remote}}172.17.0.1{{/remote}}:{{port}} {
+      transparent
+      websocket
+    }
+{{/paths}}
     proxy / {{#remote}}{{remote}}{{/remote}}{{^remote}}172.17.0.1{{/remote}}:{{port}} {
       transparent
       websocket
