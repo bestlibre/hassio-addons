@@ -20,6 +20,12 @@
     basicauth / {{user}} {{pwd}}
   {{/pwd}}
 {{/user}}
+{{#dns}}
+    tls {
+      provider {{provider}}
+    }
+{{/dns}}
+
     log stdout
     errors stdout
 }

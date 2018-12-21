@@ -32,6 +32,9 @@
 	"email": "email",
 	"disable_http_chalenge": "bool?",
 	"staging": "bool?",
+	"dns": {"provider": "str",
+		"variables": [{"name": "str", "value": "str"}]
+	       },
 	"raw_config": [{"line": "str"}],
 	"homeassistant": "str?"
     },

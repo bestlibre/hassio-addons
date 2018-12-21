@@ -52,6 +52,21 @@ Email is the email address to use with which to generate a certificate with Let'
 
 Activate staging  environment for letsencrypt. False by default.
 
+### dns (dict)
+
+Activate dns challenge
+
+#### provider (string)
+
+DNS provider to use. The complete list of supported provider can be found [here](https://caddyserver.com/docs/automatic-https#dns-challenge).
+
+#### variables (list of dict)
+
+List of environment variables needed for the DNS challenge 
+
+- **name** : name of the environment variable
+- **value** : value associated
+
 ### raw_config (list)
 
 #### line (str)

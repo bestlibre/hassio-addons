@@ -17,6 +17,8 @@ fi
 
 python3 /mustache.py /templates/vhost.mustache /data/options.json >> /tmp/caddy.conf
 
+eval $(jq --raw-output '.dns.variables // [] | .[] | "export " + .name + "=\"" + .value + "\""' /data/options.json)
+
 mkdir -p /ssl/caddy
 export CADDYPATH=/ssl/caddy
 caddy -agree ${https_only} ${staging} -email "$email" -conf /tmp/caddy.conf
