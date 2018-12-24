@@ -19,12 +19,7 @@
 	     "remote": "str?",
 	     "port": "str",
 	     "directory": "str?",
-	     "paths": [
-		 {"path": "str",
-		  "remote": "str?",
-		  "port": "str"
-		 }
-	     ],
+	     "paths": [ "str" ],
 	     "user": "str?",
 	     "pwd": "str?"
 	    }
@@ -32,7 +27,7 @@
 	"email": "email",
 	"disable_http_chalenge": "bool?",
 	"staging": "bool?",
-	"raw_config": [{"line": "str"}],
+	"raw_config": ["str"],
 	"homeassistant": "str?"
     },
     "ports": {"80/tcp": 80, "443/tcp": 443},

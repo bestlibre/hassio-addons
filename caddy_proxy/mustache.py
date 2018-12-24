@@ -11,6 +11,14 @@ def render(template, data):
     else:
         with open(data, 'r') as f:
             context = json.load(f)
+    for vhost in context.get('vhosts'):
+        if vhost.get('paths'):
+            l = [{'path': line} for line in vhost.get('paths')]
+            vhost['paths'] = l
+
+    if context.get('raw_config'):
+        l = [{'line': line} for line in context.get('raw_config')]
+        context['raw_config'] = l
     renderer = pystache.Renderer(escape=lambda u: u)
     print(renderer.render_path(template, context))
 

@@ -36,13 +36,21 @@ Username to be used with basicauth. `pwd` (see below) must also be set.
 
 Password to be used with basicauth. `user` (see above) must also be set.
 
-#### paths (list)
+#### paths (list of str)
 
 This list describe all the subpath to be proxified, other that the root `/`. It must be set (if the `vhosts`list is not empty) to have a valid configuration but can be empty.
 
+Each string must have the following format :
+
+```
+<path> <remote>:<port>
+```
+
+with :
+
 - **path** (str): path to be proxify (ie `/api/`).
+- **remote** (str): Ip or url for the proxified server. Use `172.17.0.1` for the docker host.
 - **port** (str): Internal port.
-- **remote** (str): Ip or url for the proxified server. If not set default to 172.17.0.1 (docker host).
 
 ### email (email)
 
@@ -52,7 +60,8 @@ Email is the email address to use with which to generate a certificate with Let'
 
 Activate staging  environment for letsencrypt. False by default.
 
-### raw_config (list)
+### raw_config (list of str)
 
-#### line (str)
-Each line will be added to the caddy configuration file, after the domain proxified with the vhosts section.
+Each string will be added to the caddy configuration file as a new line, after the domain proxified with the vhosts section.
+
+**BREAKING CHANGE** In previous version, this was a list of dict with an object of the form `{'line': str}`. The inderection was removed.

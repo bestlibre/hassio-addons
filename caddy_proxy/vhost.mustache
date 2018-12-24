@@ -5,7 +5,7 @@
 {{/directory}}
 {{^directory}}
 {{#paths}}
-    proxy {{path}} {{#remote}}{{remote}}{{/remote}}{{^remote}}172.17.0.1{{/remote}}:{{port}} {
+    proxy {{path}} {
       transparent
       websocket
     }
