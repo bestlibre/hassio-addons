@@ -29,10 +29,9 @@ RUN set -ex \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         jq mopidy mopidy-spotify mopidy-local-sqlite \
  && curl -L https://bootstrap.pypa.io/get-pip.py | python - \
- && pip install -U six oauth2client\
+ && pip install -U six oauth2client pyasn1 \
  && pip install \
-	pyasn1 \
-        Mopidy-Moped \
+	Mopidy-Moped \
         Mopidy-GMusic \
 	Mopidy-Iris \
  && apt-get purge --auto-remove -y \
