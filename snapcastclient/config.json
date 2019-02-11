@@ -6,6 +6,7 @@
   "startup": "application",
   "boot": "auto",
   "image": "bestlibre/{arch}-snapcast-client",
+  "audio": true,
   "options": {},
   "schema": {"host": "str"},
   "ports": {},
