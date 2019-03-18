@@ -1,0 +1,7 @@
+{
+    "build_from": {
+	"armhf" : "arm32v7/debian:stretch",
+    "armv7" : "arm32v7/debian:stretch",
+	"aarch64": "arm64v8/debian:stretch"
+    }
+}

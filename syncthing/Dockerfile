@@ -12,7 +12,7 @@ RUN apk add --no-cache -U --virtual .build-deps \
         curl \
 	tar \
  && SYNCTHING_VERSION=v${BUILD_VERSION%-*} \
- && if [ ${BUILD_ARCH} == "armhf" ]; then syncthingarch=arm;\
+ && if [ ${BUILD_ARCH} == "armhf" -o ${BUILD_ARCH} == "armv7" ]; then syncthingarch=arm;\
     elif [ ${BUILD_ARCH} == "amd64" ]; then syncthingarch=amd64;\
     elif [ ${BUILD_ARCH} == "i386" ]; then syncthingarch=386;\
     elif [ ${BUILD_ARCH} == "aarch64" ]; then syncthingarch=arm64;\

@@ -17,7 +17,7 @@ RUN apk add --no-cache -U --virtual .build-deps \
 	python-dev \
  && mkdir /cw \
  && cd /cw \
- && git clone -b comic_server https://github.com/janeczku/calibre-web.git .\
+ && git clone https://github.com/janeczku/calibre-web.git .\
  && pip install -r requirements.txt --target vendor
 
 # Copy data

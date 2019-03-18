@@ -1,6 +1,6 @@
 {
     "name": "Grafana Multiarch",
-    "version": "5.1.4-1",
+    "version": "6.0.1",
     "slug": "grafana_multiarch",
     "image": "bestlibre/{arch}-grafana",
     "description": "Grafana addon. Image based on upstream docker images. The version used is the greater common version between the official amd64 image and the f2git one for armhf",
@@ -10,7 +10,7 @@
     "boot": "auto",
     "ports": {"3000/tcp": 3000},
     "environment": {"GF_PATHS_DATA":"/data", "GF_PATHS_PLUGINS":"/data/plugins"},
-    "arch": ["armhf", "amd64"],
+    "arch": ["armhf", "amd64", "armv7", "aarch64"],
     "options": {"env_var": []},
     "schema": {"env_var":[{"name": "str", "value": "str"}]},
     "webui": "http://[HOST]:[PORT:3000]"

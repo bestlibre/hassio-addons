@@ -1,6 +1,6 @@
 {
     "name": "Python Executor",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "slug": "python_exec",
     "image": "bestlibre/{arch}-python-exec",
     "description": "Python executor",
@@ -13,5 +13,6 @@
     "schema": {"code": "str",
 	       "requirements": ["str"],
 	       "clean": "bool?"},
-    "map": ["share"]
+    "map": ["share"],
+    "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"]
 }

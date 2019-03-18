@@ -1,11 +1,12 @@
 {
     "name": "Calibre Web Comics",
-    "version": "0.1",
+    "version": "0.2",
     "slug": "calibre-web-comics",
     "description": "Calibre web (Comics Server branch)",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/calibreweb",
     "startup": "after",
     "boot": "auto",
+    "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"],
     "image": "bestlibre/{arch}-calibre-web-comics",
     "options": {},
     "schema": {},

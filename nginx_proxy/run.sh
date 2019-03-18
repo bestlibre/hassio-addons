@@ -13,7 +13,7 @@ echo "$auths" | while read -r vhost auth; do
     echo "$auth" >"/data/auth_$vhost"
 done
 
-mustache-cli /data/options.json /templates/vhost.mustache > /etc/nginx/conf.d/vhosts.conf
+python3 /mustache.py /templates/vhost.mustache /data/options.json > /etc/nginx/conf.d/vhosts.conf
 
 # forward request and error logs to docker log collector
 ln -sf /dev/stdout /var/log/nginx/access.log

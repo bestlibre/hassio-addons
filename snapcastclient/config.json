@@ -10,5 +10,6 @@
   "options": {},
   "schema": {"host": "str"},
   "ports": {},
-  "devices": ["/dev/snd:/dev/snd:rwm"]
+  "devices": ["/dev/snd:/dev/snd:rwm"],
+  "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"]
 }

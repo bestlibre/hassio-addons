@@ -1,6 +1,6 @@
 {
     "name": "Mopidy",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "slug": "mopidy",
     "description": "mopidy music server",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/mopidy",
@@ -18,5 +18,6 @@
     "ports": {"6680/tcp": 6680, "6600/tcp": 6600},
     "map": ["share"],
     "webui": "http://[HOST]:[PORT:6680]",
-    "host_ipc": true
+    "host_ipc": true,
+    "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"]
 }

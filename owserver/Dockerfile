@@ -1,7 +1,5 @@
-#armhf:FROM bestlibre/armhf-debian-base:stretch
-#aarch64:FROM bestlibre/aarch64-debian-base:stretch
-#amd64:FROM debian:stretch
-#i386:FROM i386/debian:stretch
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 ENV LANG C.UTF-8
 

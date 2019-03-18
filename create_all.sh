@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-for arch in "armhf" "aarch64" "i386" "amd64"
+for arch in "armhf" "aarch64" "i386" "amd64" "armv7"
 do
     ./create_hassio_addon.sh -a $arch "$@" &
 done

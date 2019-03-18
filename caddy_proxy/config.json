@@ -1,12 +1,13 @@
 {
     "name": "Caddy Proxy",
-    "version": "0.11.1-3",
+    "version": "0.11.5",
     "slug": "caddy_proxy",
     "description": "Caddy Proxy for multiple VHOSTS with ssl",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/caddy_proxy",
     "startup": "system",
     "boot": "auto",
     "image": "bestlibre/{arch}-caddy-proxy",
+    "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"],
     "options": {
 	"homeassistant": "homeassistant.domain.tld",
 	"vhosts": [],

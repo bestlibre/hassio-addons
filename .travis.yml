@@ -4,7 +4,6 @@ services:
 before_install:
   - sudo apt-get install jq
 env:
-  - ADDON="nextcloud" ARCHS="--armhf"
   - ADDON="python_exec"
   - ADDON="mopidy mopidy_cast"
   - ADDON="influxdb"
@@ -16,6 +15,7 @@ env:
   - ADDON="caddy_proxy"
   - ADDON="grafana"
   - ADDON="calibreweb"
+  - ADDON="calibreweb_comics"
 script:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - ./build.sh $ADDON 
