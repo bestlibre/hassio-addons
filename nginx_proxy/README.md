@@ -26,6 +26,10 @@ Configure this vhost to be the default is set to true. Must only be used once.
 
 Ip or url for the proxified server. If not set default to 172.17.0.1 (docker host).
 
+#### remote_ssl (bool)
+
+If http or https should be used for the proxified server. Defaults to http.
+
 #### auth (str)
 
 Enables HTTP basic auth for a single user on a vhost. The string is dumped
