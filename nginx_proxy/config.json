@@ -18,6 +18,7 @@
     "vhosts": [
       {"vhost": "str",
        "remote": "str?",
+       "remote_ssl": "bool?",
        "port": "str",
        "default_server": "bool?",
        "certname": "str?",
