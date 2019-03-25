@@ -68,7 +68,7 @@ server {
     client_max_body_size {{max_body_size}};
     {{/max_body_size}}
     location / {
-        proxy_pass {{#remote_ssl}}https{{#remote_ssl}}{{^remote_ssl}}http{{/remote_ssl}://{{#remote}}{{remote}}{{/remote}}{{^remote}}172.17.0.1{{/remote}}:{{port}};
+        proxy_pass {{#remote_ssl}}https{{#remote_ssl}}{{^remote_ssl}}http{{/remote_ssl}}://{{#remote}}{{remote}}{{/remote}}{{^remote}}172.17.0.1{{/remote}}:{{port}};
         {{#x-ha-access}}proxy_set_header x-ha-access "{{x-ha-access}}";{{/x-ha-access}}
     }
 }
