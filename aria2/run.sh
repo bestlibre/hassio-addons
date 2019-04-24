@@ -9,7 +9,12 @@ if [ ! -f ${session_file} ]; then
     touch ${session_file}
 fi
 
+conf_file=/data/aria2.conf
+if [ ! -f ${conf_file} ]; then
+    touch ${conf_file}
+fi
+
 darkhttpd /webui-aria2 --port 8080 &
 
 
-aria2c --enable-rpc --rpc-secret=${secret} --rpc-listen-all --save-session=${session_file} --input-file=${session_file} --save-session-interval=30 --dir=${downloads} ${options}
+aria2c --enable-rpc --rpc-secret=${secret} --rpc-listen-all --save-session=${session_file} --input-file=${session_file} --save-session-interval=30 --dir=${downloads} --conf-path=${conf_file} ${options}

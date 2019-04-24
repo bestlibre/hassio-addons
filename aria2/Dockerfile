@@ -11,12 +11,9 @@ ENV LANG C.UTF-8
 RUN apk add --no-cache -U --virtual .build-deps \
         git \
  && apk add --no-cache -U aria2 darkhttpd jq \
- && git clone https://github.com/ziahamza/webui-aria2.git /webui-aria2 \
- && rm -rf /webui-aria2/.git \
- && rm -rf /webui-aria2/screenshots \
- && rm -rf /webui-aria2/*.md \
- && rm -rf /webui-aria2/Dockerfile* \
- && rm -rf /webui-aria2/node-server.js \
+ && git clone https://github.com/ziahamza/webui-aria2.git /tmp_webui \
+ && mv /tmp_webui/docs /webui-aria2 \
+ && rm -rf /tmp_webui \
  && apk del .build-deps
 
 COPY run.sh /
