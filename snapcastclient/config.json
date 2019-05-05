@@ -1,6 +1,6 @@
 {
   "name": "snapcast-client",
-  "version": "0.15.0-1",
+  "version": "0.15.0-2",
   "slug": "snapcastclient",
   "description": "Snapcast client for multiroom audio diffusion",
   "startup": "application",
@@ -8,7 +8,7 @@
   "image": "bestlibre/{arch}-snapcast-client",
   "audio": true,
   "options": {},
-  "schema": {"host": "str"},
+  "schema": {"host": "str", "soundcard": "str?", "name": "str?"},
   "ports": {},
   "devices": ["/dev/snd:/dev/snd:rwm"],
   "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"]
