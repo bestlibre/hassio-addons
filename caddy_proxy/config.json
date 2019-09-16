@@ -1,6 +1,6 @@
 {
     "name": "Caddy Proxy",
-    "version": "0.11.5-1",
+    "version": "0.11.5-2",
     "slug": "caddy_proxy",
     "description": "Caddy Proxy for multiple VHOSTS with ssl",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/caddy_proxy",
@@ -18,6 +18,7 @@
 	"vhosts": [
 	    {"vhost": "str",
 	     "remote": "str?",
+	     "subdir": "str?",
 	     "port": "str",
 	     "directory": "str?",
 	     "paths": [ "str" ],

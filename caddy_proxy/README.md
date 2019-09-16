@@ -24,9 +24,13 @@ Full hostname (ie myservice.domain.tld)
 
 Internal port (ie 8123 for homeassistant, 3000 for grafana)
 
-#### remote (str)
+#### remote (str, optional)
 
 Ip or url for the proxified server. If not set default to 172.17.0.1 (docker host).
+
+#### subdir (str, optional)
+
+path to be added at the end of the proxied url (ie homeassistant:8123/**subdir**). Do not add the first `/`, it will be added by the template.
 
 #### user (str)
 
