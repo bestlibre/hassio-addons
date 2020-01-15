@@ -1,6 +1,6 @@
 {
     "name": "Aria2",
-    "version": "0.3",
+    "version": "0.4",
     "slug": "aria2",
     "description": "Aria2 download manager",
     "url": "https://github.com/bestlibre/hassio-addons/tree/master/aria2",
