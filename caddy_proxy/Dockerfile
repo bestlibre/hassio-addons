@@ -23,7 +23,7 @@ RUN apk add --no-cache -U --virtual .build-deps \
     elif [ ${BUILD_ARCH} == "i386" ]; then caddyarch=386;\
     elif [ ${BUILD_ARCH} == "aarch64" ]; then caddyarch=arm64;\
     fi \
- && caddyurl=https://github.com/mholt/caddy/releases/download/${CADDY_VERSION}/caddy_${CADDY_VERSION}_linux_${caddyarch}.tar.gz \
+ && caddyurl="https://caddyserver.com/download/linux/${caddyarch}?plugins=http.ipfilter&license=personal&telemetry=off" \
  && echo $caddyurl \
  && curl --silent --show-error --fail --location --header "Accept: application/tar+gzip, application/x-gzip, application/octet-stream" -o - \
       "$caddyurl" \
