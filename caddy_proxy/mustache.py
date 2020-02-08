@@ -12,6 +12,9 @@ def render(template, data):
         with open(data, 'r') as f:
             context = json.load(f)
     for vhost in context.get('vhosts'):
+        if vhost.get('ip'):
+            l = [{'ipline': line} for line in vhost.get('ip')]
+            vhost['ip'] = l
         if vhost.get('paths'):
             l = [{'path': line} for line in vhost.get('paths')]
             vhost['paths'] = l
