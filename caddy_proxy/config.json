@@ -17,6 +17,7 @@
     "schema": {
 	"vhosts": [
 	    {"vhost": "str",
+	     "notls": "bool?",
 	     "remote": "str?",
 	     "port": "str",
 	     "directory": "str?",
