@@ -24,6 +24,10 @@ Full hostname (ie myservice.domain.tld)
 
 Internal port (ie 8123 for homeassistant, 3000 for grafana)
 
+#### inotls (bool)
+
+If `true` deactivate ssl for this host. If not set or `false` ssl is activated per caddy rules (ie if port != 80)
+
 #### remote (str)
 
 Ip or url for the proxified server. If not set default to 172.17.0.1 (docker host).
@@ -51,6 +55,22 @@ with :
 - **path** (str): path to be proxify (ie `/api/`).
 - **remote** (str): Ip or url for the proxified server. Use `172.17.0.1` for the docker host.
 - **port** (str): Internal port.
+
+#### ip (list of str)
+
+Configuration for ip filtering. It must be set (if the `vhosts`list is not empty) to have a valid configuration but can be empty.
+
+Each string will be converted as a line in the caddy config file. It must create a valid bloc for [the ip filtering plugin](https://caddyserver.com/v1/docs/http.ipfilter).
+
+The following bloc allow access only from a given ip (`192.168.0.1`) and a sub-network (`192.168.1.0/24`)
+```
+"ip": [
+        "ipfilter / {",
+        "  rule allow",
+        "  ip 192.168.0.1 192.168.1.0/24",
+        "}"
+      ]
+``` 
 
 ### email (email)
 
