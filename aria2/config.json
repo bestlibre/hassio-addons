@@ -10,7 +10,14 @@
     "image": "bestlibre/{arch}-aria2",
     "options": {"options":[]},
     "schema": {"downloads": "str?", "secret": "str?", "options":[{"name": "str", "value": "str"}]},
-    "ports": {"6800/tcp": null, "8080/tcp": null},
     "map": ["share:rw"],
-    "webui": "http://[HOST]:[PORT:8080]"
+    "webui": "http://[HOST]:[PORT:8080]",
+    "ingress": true,
+    "ingress_port": 8080,
+    "panel_icon": "mdi:download",
+    "ports": {"6800/tcp": 6800, "8080/tcp": null},
+    "ports_description": {
+      "6800/tcp": "Aria2 RPC port",
+      "8080/tcp": "Aria2 WebUI interface"
+  }
 }
