@@ -10,14 +10,22 @@ ENV LANG C.UTF-8
 # Setup base
 RUN apk add --no-cache -U --virtual .build-deps \
         git \
+        unzip \
+        wget \
  && apk add --no-cache -U aria2 darkhttpd jq \
+ && mkdir /webui \
  && git clone https://github.com/ziahamza/webui-aria2.git /tmp_webui \
- && mv /tmp_webui/docs /webui-aria2 \
+ && mv /tmp_webui/docs /webui/webui-aria2 \
  && rm -rf /tmp_webui \
+ && mkdir /webui/ariang \
+ && cd /webui/ariang \
+ && wget -O ariang.zip https://github.com/mayswind/AriaNg/releases/download/1.1.5/AriaNg-1.1.5.zip \
+ && unzip ariang.zip \
+ && rm ariang.zip \
  && apk del .build-deps
 
 COPY run.sh /
-
+COPY index.html /webui/
 RUN chmod a+x /run.sh
 
 CMD [ "/run.sh" ]
