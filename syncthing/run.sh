@@ -7,5 +7,5 @@ if [ ! -f '/data/config.xml' ]; then
     syncthing -generate=/data
     sed -i 's|<address>127.0.0.1:8384</address>|<address>:8384</address>|' /data/config.xml
 fi
-syncthing -no-browser -home=/data/
+syncthing -allow-newer-config -no-browser -home=/data/
 
