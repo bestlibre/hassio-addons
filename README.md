@@ -29,7 +29,7 @@ see https://github.com/hassio-addons/repository/tree/master/grafana
 snapcast server and client for multi room audio : not updated anymore
 
 ## [Syncthing](https://github.com/bestlibre/hassio-addons/tree/master/syncthing) [![](https://images.microbadger.com/badges/version/bestlibre/armhf-syncthing.svg)](https://microbadger.com/images/bestlibre/armhf-syncthing "Get your own version badge on microbadger.com")
-Syncthing synchronization service : working.
+see https://github.com/agileek/hassio-addons
 
 ## [Owserver](https://github.com/bestlibre/hassio-addons/tree/master/owserver) [![](https://images.microbadger.com/badges/version/bestlibre/armhf-owserver.svg)](https://microbadger.com/images/bestlibre/armhf-owserver "Get your own version badge on microbadger.com")
 
