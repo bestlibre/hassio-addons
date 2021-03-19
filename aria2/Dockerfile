@@ -19,7 +19,7 @@ RUN apk add --no-cache -U --virtual .build-deps \
  && rm -rf /tmp_webui \
  && mkdir /webui/ariang \
  && cd /webui/ariang \
- && wget -O ariang.zip https://github.com/mayswind/AriaNg/releases/download/1.1.5/AriaNg-1.1.5.zip \
+ && wget -O ariang.zip https://github.com/mayswind/AriaNg/releases/download/1.2.1/AriaNg-1.2.1.zip \
  && unzip ariang.zip \
  && rm ariang.zip \
  && apk del .build-deps
