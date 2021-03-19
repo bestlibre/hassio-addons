@@ -3,6 +3,7 @@ services:
   - docker
 before_install:
   - sudo apt-get install jq
+  - docker pull multiarch/qemu-user-static
 env:
   - ADDON="python_exec"
   - ADDON="mopidy mopidy_cast"
