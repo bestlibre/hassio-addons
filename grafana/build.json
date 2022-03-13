@@ -1,8 +1,0 @@
-{
-    "build_from": {
-	"amd64" : "grafana/grafana:6.0.1",
-	"armhf" : "grafana/grafana-arm32v7-linux:6.0.1",
-    "armv7" : "grafana/grafana-arm32v7-linux:6.0.1",
-    "aarch64" : "grafana/grafana-arm64v8-linux:6.0.1"
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "build_from" : {
-	"armhf" : "bestlibre/armhf-mopidy",
-	"armv7" : "bestlibre/armv7-mopidy",
-	"amd64" : "bestlibre/amd64-mopidy",
-	"aarch64" : "bestlibre/aarch64-mopidy",
-	"i386" : "bestlibre/i386-mopidy"
-    }
-}
