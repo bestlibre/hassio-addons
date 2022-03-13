@@ -1,15 +1,27 @@
 {
     "name": "1-wire Server",
-    "version": "0.1.1",
+    "version": "0.2.1",
     "slug": "owserver",
     "description": "One wire server",
     "url": "https://github.com/stoeppke/hassio-addons/tree/master/owserver",
     "startup": "system",
     "boot": "auto",
+    "host_network": true,
+    "privileged": [
+        "SYS_MODULE",
+        "SYS_RAWIO"
+      ],
     "image": "bestlibre/{arch}-owserver",
-    "options": {},
-    "schema": {},
-    "devices": ["/dev/bus/usb/001/010:/dev/bus/usb/001/010:rwm"],
-    "ports": {"4304/tcp": null},
-    "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"]
+    "options": {
+        "interface": "usb",
+        "device": ""
+    },
+    "schema": {
+        "device": "device?",
+        "usb_filters": "str?"
+    },
+    "ports": {"4304/tcp": 4304},
+    "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"],
+    "uart": true,
+    "hassio_role": "admin"
 }
