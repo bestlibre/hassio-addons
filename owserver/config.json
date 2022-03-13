@@ -3,13 +3,13 @@
     "version": "0.1.1",
     "slug": "owserver",
     "description": "One wire server",
-    "url": "https://github.com/bestlibre/hassio-addons/tree/master/owserver",
+    "url": "https://github.com/stoeppke/hassio-addons/tree/master/owserver",
     "startup": "system",
     "boot": "auto",
     "image": "bestlibre/{arch}-owserver",
     "options": {},
     "schema": {},
-    "devices": ["/dev/i2c-1:/dev/i2c-1:rwm"],
+    "devices": ["/dev/bus/usb/001/010:/dev/bus/usb/001/010:rwm"],
     "ports": {"4304/tcp": null},
     "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"]
 }
