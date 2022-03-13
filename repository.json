@@ -1,5 +1,5 @@
 {
-    "name": "BestLibre addons repository",
-    "url": "https://github.com/bestlibre/hassio-addons",
-    "maintainer": "BestLibre <githubATbestlibreDOTorg>"
+    "name": "JPRF moded addons repository",
+    "url": "https://github.com/stoeppke/hassio-addons",
+    "maintainer": "JPRF Stoeppke <dev@jprf.de>"
 }
