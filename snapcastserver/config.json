@@ -8,5 +8,6 @@
   "image": "bestlibre/{arch}-snapcast-server",
   "options": {},
   "schema": {},
-  "ports": {"1704/tcp": 1704}
+  "ports": {"1704/tcp": 1704},
+  "arch": ["armv7", "armhf", "amd64", "aarch64", "i386"]
 }
